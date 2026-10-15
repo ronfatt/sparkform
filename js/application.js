@@ -230,6 +230,23 @@
       }
     }
 
+    // 动态同步更新网页 Title 和 Meta / OG / Twitter 描述
+    if (dict && dict.meta_title) {
+      document.title = dict.meta_title;
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', dict.meta_title);
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute('content', dict.meta_title);
+    }
+    if (dict && dict.meta_desc) {
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', dict.meta_desc);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', dict.meta_desc);
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute('content', dict.meta_desc);
+    }
+
     const langToastMap = {
       'zh-CN': '已切换至 简体中文',
       'zh-TW': '已切換至 繁體中文',

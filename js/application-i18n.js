@@ -357,7 +357,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "活动圆满成功，现场转化率达标...",
     "ph_job": "职业背景与Web3/金融经验",
     "ph_perf": "业绩口径及时间",
-    "ph_reason": "使用规划及30天推进动作"
+    "ph_reason": "使用规划及30天推进动作",
+    "meta_title": "Spark One 官方申请与表单申报中心 (A4标准) - SPARK UNION CAPITAL",
+    "meta_desc": "Spark One 官方申请与表单申报服务平台（SPARK UNION CAPITAL INC.），提供标准 A4 规格申请表在线填写、多语言实时切换、手写电子签名与 Word (.docx) / PDF (.pdf) 一键导出服务。涵盖办公室补贴、讲师津贴、活动预算及市场领航扶持等核心申报业务。"
   },
   "zh-TW": {
     "unit_day": "天",
@@ -710,7 +712,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "活動圓滿成功，現場轉化率達標...",
     "ph_job": "職業背景與Web3/金融經驗",
     "ph_perf": "業績口徑及時間",
-    "ph_reason": "使用規劃及30天推進動作"
+    "ph_reason": "使用規劃及30天推進動作",
+    "meta_title": "Spark One 官方申請與表單申報中心 (A4標準) - SPARK UNION CAPITAL",
+    "meta_desc": "Spark One 官方申請與表單申報服務平台（SPARK UNION CAPITAL INC.），提供標準 A4 規格申請表線上填寫、多語言實時切換、手寫電子簽名與 Word (.docx) / PDF (.pdf) 一鍵導出服務。涵蓋辦公室補貼、講師津貼、活動預算及市場領航扶持等核心申報業務。"
   },
   "en": {
     "unit_day": "days",
@@ -1063,7 +1067,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Event successful, target conversion achieved...",
     "ph_job": "Professional background in Web3 / finance",
     "ph_perf": "Performance track record and timeframe",
-    "ph_reason": "Execution plan and 30-day action milestones"
+    "ph_reason": "Execution plan and 30-day action milestones",
+    "meta_title": "Spark One Official Application & Forms Center (A4 Standard) - SPARK UNION CAPITAL",
+    "meta_desc": "Spark One Official Application & Forms Center (SPARK UNION CAPITAL INC.). Standardized A4 application forms with online filling, multi-language support, digital signatures, and one-click export to Word (.docx) and PDF (.pdf)."
   },
   "ko": {
     "unit_day": "일",
@@ -1416,7 +1422,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "행사 성공적 종료, 목표 전환 달성...",
     "ph_job": "Web3 및 금융 전문 경력",
     "ph_perf": "실적 지표 및 기간",
-    "ph_reason": "사용 계획 및 30일 실행 로드맵"
+    "ph_reason": "사용 계획 및 30일 실행 로드맵",
+    "meta_title": "Spark One 공식 신청 및 서식 센터 (A4 표준) - SPARK UNION CAPITAL",
+    "meta_desc": "Spark One 공식 신청 및 서식 센터 (SPARK UNION CAPITAL INC.). A4 표준 규격 온라인 작성, 12개국 다국어 지원, 전자 서명 및 Word (.docx) / PDF (.pdf) 원클릭 내보내기 지원."
   },
   "ja": {
     "unit_day": "日",
@@ -1769,7 +1777,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "大盛況のうちに終了、目標達成...",
     "ph_job": "Web3および金融業界の経歴",
     "ph_perf": "実績および対象期間",
-    "ph_reason": "利用計画および30日間の実行アクション"
+    "ph_reason": "利用計画および30日間の実行アクション",
+    "meta_title": "Spark One 公式申請・届出センター (A4標準規格) - SPARK UNION CAPITAL",
+    "meta_desc": "Spark One 公式申請・届出センター (SPARK UNION CAPITAL INC.)。国際A4規格オンライン申請、12言語対応、電子署名およびWord (.docx) / PDF (.pdf) ワンクリック出力。"
   },
   "th": {
     "unit_day": "วัน",
@@ -2122,7 +2132,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "กิจกรรมสำเร็จลุล่วง บรรลุเป้าหมาย...",
     "ph_job": "ประสบการณ์ในสาย Web3 / การเงิน",
     "ph_perf": "ประวัติผลงานและช่วงเวลา",
-    "ph_reason": "แผนการดำเนินงานและเป้าหมาย 30 วัน"
+    "ph_reason": "แผนการดำเนินงานและเป้าหมาย 30 วัน",
+    "meta_title": "ศูนย์รับคำขอและแบบฟอร์มทางการ Spark One (มาตรฐาน A4) - SPARK UNION CAPITAL",
+    "meta_desc": "ศูนย์รับคำขอและแบบฟอร์มทางการ Spark One (SPARK UNION CAPITAL INC.) มาตรฐาน A4 รองรับการกรอกออนไลน์ 12 ภาษา ลายมือชื่ออิเล็กทรอนิกส์ และส่งออก Word (.docx) / PDF (.pdf) ในคลิกเดียว"
   },
   "vi": {
     "unit_day": "ngày",
@@ -2475,7 +2487,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Sự kiện thành công tốt đẹp, đạt chỉ tiêu...",
     "ph_job": "Kinh nghiệm chuyên môn Web3 / tài chính",
     "ph_perf": "Thành tích và thời gian",
-    "ph_reason": "Kế hoạch sử dụng và hành động trong 30 ngày"
+    "ph_reason": "Kế hoạch sử dụng và hành động trong 30 ngày",
+    "meta_title": "Trung tâm biểu mẫu & đơn đăng ký chính thức Spark One (Chuẩn A4) - SPARK UNION CAPITAL",
+    "meta_desc": "Trung tâm biểu mẫu & đơn đăng ký chính thức Spark One (SPARK UNION CAPITAL INC.). Chuẩn A4 trực tuyến, hỗ trợ 12 ngôn ngữ, chữ ký điện tử và xuất Word (.docx) / PDF (.pdf) nhanh chóng."
   },
   "id": {
     "unit_day": "hari",
@@ -2828,7 +2842,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Acara sukses, target konversi tercapai...",
     "ph_job": "Latar belakang profesional di Web3 / keuangan",
     "ph_perf": "Rekam jejak kinerja dan periode",
-    "ph_reason": "Rencana penggunaan dan milestone 30 hari"
+    "ph_reason": "Rencana penggunaan dan milestone 30 hari",
+    "meta_title": "Pusat Permohonan & Formulir Resmi Spark One (Standar A4) - SPARK UNION CAPITAL",
+    "meta_desc": "Pusat Permohonan & Formulir Resmi Spark One (SPARK UNION CAPITAL INC.). Format standar A4 dengan pengisian online, dukungan 12 bahasa, tanda tangan digital, dan ekspor instan ke Word (.docx) & PDF (.pdf)."
   },
   "ms": {
     "unit_day": "hari",
@@ -3181,7 +3197,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Acara berjaya, sasaran tercapai...",
     "ph_job": "Pengalaman profesional dalam Web3 / kewangan",
     "ph_perf": "Rekod prestasi dan tempoh",
-    "ph_reason": "Pelan pelaksanaan dan sasaran 30 hari"
+    "ph_reason": "Pelan pelaksanaan dan sasaran 30 hari",
+    "meta_title": "Pusat Permohonan & Borang Rasmi Spark One (Piawaian A4) - SPARK UNION CAPITAL",
+    "meta_desc": "Pusat Permohonan & Borang Rasmi Spark One (SPARK UNION CAPITAL INC.). Format standard A4 dengan pengisian dalam talian, sokongan 12 bahasa, tandatangan digital dan eksport Word (.docx) & PDF (.pdf)."
   },
   "es": {
     "unit_day": "días",
@@ -3534,7 +3552,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Evento exitoso, conversión alcanzada...",
     "ph_job": "Experiencia profesional en Web3 / finanzas",
     "ph_perf": "Registro de desempeño y período",
-    "ph_reason": "Plan de ejecución y metas a 30 días"
+    "ph_reason": "Plan de ejecución y metas a 30 días",
+    "meta_title": "Centro Oficial de Solicitudes y Formularios Spark One (Norma A4) - SPARK UNION CAPITAL",
+    "meta_desc": "Centro Oficial de Solicitudes y Formularios Spark One (SPARK UNION CAPITAL INC.). Formularios estándar A4 con llenado en línea, soporte multilingüe, firma digital y exportación en Word (.docx) y PDF (.pdf)."
   },
   "pt": {
     "unit_day": "dias",
@@ -3887,7 +3907,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "Evento bem-sucedido, metas atingidas...",
     "ph_job": "Experiência profissional em Web3 / finanças",
     "ph_perf": "Histórico de desempenho e período",
-    "ph_reason": "Plano de execução e marcos de 30 dias"
+    "ph_reason": "Plano de execução e marcos de 30 dias",
+    "meta_title": "Centro Oficial de Solicitações e Formulários Spark One (Padrão A4) - SPARK UNION CAPITAL",
+    "meta_desc": "Centro Oficial de Solicitações e Formulários Spark One (SPARK UNION CAPITAL INC.). Formulários padrão A4 com preenchimento online, suporte multilíngue, assinatura digital e exportação para Word (.docx) e PDF (.pdf)."
   },
   "ar": {
     "unit_day": "أيام",
@@ -4240,7 +4262,9 @@ window.APPLICATION_I18N = (function () {
     "ph_summary": "نجحت الفعالية وتم تحقيق الأهداف...",
     "ph_job": "الخلفية المهنية في Web3 والتمويل",
     "ph_perf": "سجل الأداء والإطار الزمني",
-    "ph_reason": "خطة التنفيذ ومراحل العمل خلال 30 يوماً"
+    "ph_reason": "خطة التنفيذ ومراحل العمل خلال 30 يوماً",
+    "meta_title": "المركز الرسمي لتقديم الطلبات والنماذج Spark One (معيار A4) - SPARK UNION CAPITAL",
+    "meta_desc": "المركز الرسمي لتقديم الطلبات والنماذج لـ Spark One (SPARK UNION CAPITAL INC.). نماذج رسمية بحجم A4 مع تعبئة عبر الإنترنت، دعم 12 لغة، توقيع إلكتروني وتصدير إلى Word و PDF."
   }
 };
 })();
