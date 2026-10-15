@@ -238,35 +238,37 @@
   }
 
   // 5. 填入示范数据
+  // 5. 填入示范数据
   function loadDemoData() {
+    const isZh = currentLang === 'zh-CN' || currentLang === 'zh-TW';
     if (activeFormId === 'office-subsidy') {
       const d = {
-        off_date: '2026年10月15日',
-        off_lead_name: '陈志远 (David Tan)',
+        off_date: isZh ? '2026年10月15日' : '2026-10-15',
+        off_lead_name: 'David Tan (陈志远)',
         off_lead_contact: '+65 9182 3746 / @david_spark',
-        off_lead_city: '新加坡 (Singapore)',
-        off_lead_team: '亚太巅峰团队 (Apex APAC)',
-        off_address: '新加坡滨海湾金融中心（MBFC Tower 2）18层 1806室',
+        off_lead_city: 'Singapore (新加坡)',
+        off_lead_team: 'Apex APAC Team',
+        off_address: 'Marina Bay Financial Centre (MBFC Tower 2) #18-06, Singapore',
         off_area: '150',
         off_capacity: '35',
         off_rent: '4800',
         off_rent_curr: 'USD',
-        off_lease_period: '2026年11月01日 至 2027年10月31日',
+        off_lease_period: isZh ? '2026年11月01日 至 2027年10月31日' : '2026-11-01 - 2027-10-31',
         off_start_date: '2026-11-01',
         off_sub_amt: '2000',
         off_sub_curr: 'USD',
-        off_sub_period: '2026年11月01日 至 2027年04月30日',
-        off_comm_name: 'Spark One 亚太核心财富公会 (Telegram官方群)',
+        off_sub_period: isZh ? '2026年11月01日 至 2027年04月30日' : '2026-11-01 - 2027-04-30',
+        off_comm_name: 'Spark One APAC Core Wealth Club (Telegram)',
         off_comm_link: 'https://t.me/Spark_Apex_APAC',
-        off_comm_admins: '陈志远、林敏怡（专属客服）',
+        off_comm_admins: 'David Tan, Evelyn Lim',
         off_comm_members: '520',
-        off_comm_active: '日均在线发言 120+ 人，每周研讨参与 350+ 人次',
-        off_comm_lang: '新加坡 / 马来西亚 / 常用英语、中文普通话',
-        off_comm_daily: '09:00 全球行情早报；14:00 黄金套利盘面解析；21:00 实盘盈利通报',
-        off_comm_weekly: '周二晚上线上腾讯会议量化拆解；周六下午线下办公室VIP沙龙交流',
-        off_comm_feedback: '建立1对1专属投顾沟通专线，30分钟内快速响应并闭环处理',
-        off_kpi_period: '2026年11月01日 至 2026年11月30日',
-        off_kpi_goal: '当月直接推荐及团队量化托管总额度突破 250,000 美元'
+        off_comm_active: '120+ active daily, 350+ weekly webinar participants',
+        off_comm_lang: 'English / Chinese / Malay',
+        off_comm_daily: '09:00 Market Morning Call; 14:00 Arbitrage Analysis; 21:00 Daily Profit Report',
+        off_comm_weekly: 'Tuesday online Zoom workshop; Saturday offline VIP office salon',
+        off_comm_feedback: '1-on-1 advisor channel, 30-min response SLA',
+        off_kpi_period: isZh ? '2026年11月01日 至 2026年11月30日' : '2026-11-01 - 2026-11-30',
+        off_kpi_goal: 'Direct and team quantitative custody exceeding 250,000 USD'
       };
       Object.keys(d).forEach(k => {
         const el = document.getElementById(k);
@@ -274,23 +276,23 @@
       });
     } else if (activeFormId === 'lecturer-subsidy') {
       const d = {
-        lec_date: '2026年10月15日',
-        lec_name: '张峰 (Raymond Zhang)',
-        lec_account: 'SPK-882910 / 资深量化主讲导师',
-        lec_city: '中国深圳 / 香港',
+        lec_date: isZh ? '2026年10月15日' : '2026-10-15',
+        lec_name: 'Raymond Zhang (张峰)',
+        lec_account: 'SPK-882910 / Senior Quantitative Lecturer',
+        lec_city: isZh ? '中国深圳 / 香港' : 'Shenzhen / Hong Kong',
         lec_contact: '+86 138 2888 9999 / raymond@spark1.cc',
-        lec_lang: '中文普通话、粤语、商务英语',
-        lec_team: '大湾区国际服务中心',
-        lec_ref: '陈志远 (+65 91823746)',
-        lec_exp: '8年对冲基金与加密量化培训经验，主讲过超50场高净值投资者财富峰会',
-        lec_amt: '2,500 USD / 月',
-        lec_audience: '高净值投资人与团队领导人，侧重 MSB 合规存证与量化稳健收益逻辑讲解',
-        lec_kpi_period: '2026年11月01日 至 2026年11月30日',
-        lec_goal: '全月累计授课时长不少于 18 课时，协助团队达成 30 万美元量化扩容',
-        lec_cond: '学员好评率 ≥ 95%，每日按时报备实录视频',
-        lec_src: '后台实盘工作台与独立存证系统对账',
-        lec_sign: '张峰',
-        lec_ref_sign: '陈志远'
+        lec_lang: isZh ? '中文普通话、粤语、商务英语' : 'English / Chinese Mandarin',
+        lec_team: isZh ? '大湾区国际服务中心' : 'GBA International Center',
+        lec_ref: 'David Tan (+65 91823746)',
+        lec_exp: '8 years hedge fund & crypto quant training experience, 50+ HNWI keynotes',
+        lec_amt: '2,500 USD / Month',
+        lec_audience: 'HNWIs and team leaders, focusing on MSB compliance & steady arbitrage yield logic',
+        lec_kpi_period: isZh ? '2026年11月01日 至 2026年11月30日' : '2026-11-01 - 2026-11-30',
+        lec_goal: 'Minimum 18 lecture hours/month, assist team in achieving $300k quant expansion',
+        lec_cond: 'Student satisfaction ≥ 95%, submit recordings daily',
+        lec_src: 'Live trading dashboard and independent settlement logs',
+        lec_sign: 'Raymond Zhang',
+        lec_ref_sign: 'David Tan'
       };
       Object.keys(d).forEach(k => {
         const el = document.getElementById(k);
@@ -298,27 +300,27 @@
       });
     } else if (activeFormId === 'event-apply') {
       const d = {
-        act_name: '2026 Spark One 全球多资产配置与AI量化私享会（新加坡站）',
+        act_name: isZh ? '2026 Spark One 全球多资产配置与AI量化私享会（新加坡站）' : '2026 Spark One Global Asset Allocation & AI Quant Summit (Singapore)',
         act_date: '2026-11-20',
-        act_venue: '新加坡滨海湾金沙会议展览中心（Sands Expo）4层大宴会厅',
-        act_app_name: '李立明 (Marcus Li)',
+        act_venue: 'Marina Bay Sands Expo & Convention Centre, Level 4 Grand Ballroom',
+        act_app_name: 'Marcus Li (李立明)',
         act_app_phone: '+65 8299 1188',
         act_app_email: 'marcus.li@sparkunioncapital.com',
-        act_app_team: '新加坡狮城创富合伙团队',
-        act_theme: '智领财富新纪元：AI黄金量化与全球多资产稳健对冲策略',
+        act_app_team: 'Singapore Lion City Partner Team',
+        act_theme: 'Empowering Wealth: AI Gold Quant & Multi-Asset Steady Hedging Strategies',
         act_b1: '1200',
         act_b2: '600',
         act_b3: '400',
         act_btotal: '2200',
-        act_resp1: '李立明 +65 82991188 市场总监',
-        act_resp2: '张峰 +86 13828889999 首席导师',
-        act_sign: '李立明',
+        act_resp1: 'Marcus Li (+65 82991188) Marketing Director',
+        act_resp2: 'Raymond Zhang (+86 13828889999) Master Lecturer',
+        act_sign: 'Marcus Li',
         act_sign_date: '2026-10-15',
         act_p_num: '48',
         act_reg_num: '22',
         act_inv_num: '15',
         act_pic_num: '85',
-        act_summary: '全场到会48位高净值客户，现场达成意向资金超38万美元，圆满达成招募考核指标。'
+        act_summary: isZh ? '全场到会48位高净值客户，现场达成意向资金超38万美元，圆满达成招募考核指标。' : '48 VIP attendees, achieved over $380,000 in custody intent, exceeding recruitment KPI target.'
       };
       Object.keys(d).forEach(k => {
         const el = document.getElementById(k);
@@ -326,19 +328,19 @@
       });
     } else if (activeFormId === 'pilot-grant') {
       const d = {
-        sec1_name: '陈志远',
+        sec1_name: 'David Tan (陈志远)',
         sec1_account: 'SPK-883921',
         sec1_contact: '+65 9182 3746',
-        sec1_residence: '新加坡滨海湾',
-        sec1_lang: '中文普通话、英语',
-        sec1_team: '亚太巅峰团队',
-        sec1_job: '10年量化对冲资产配置背景',
+        sec1_residence: 'Singapore (Marina Bay)',
+        sec1_lang: 'English / Chinese',
+        sec1_team: 'Apex APAC Team',
+        sec1_job: '10 years quant hedge asset allocation experience',
         sec1_hours: '35',
-        sec1_perf_detail: '直推 280,000 美元',
-        sec2_regions: '新加坡、吉隆坡、中国深圳',
-        sec2_reason: '开拓家族办公室，30天内保障达成10倍扶持额度业绩转化',
-        sec4_target_clients: '200人',
-        sec4_target_events: '4场',
+        sec1_perf_detail: '$280,000 direct quant custody',
+        sec2_regions: 'Singapore, Kuala Lumpur, Shenzhen',
+        sec2_reason: 'Expand family offices and secure 10x quota conversion within 30 days',
+        sec4_target_clients: isZh ? '200人' : '200',
+        sec4_target_events: isZh ? '4场' : '4',
         sec7_date: '2026-10-15'
       };
       Object.keys(d).forEach(k => {
@@ -447,8 +449,11 @@
         this.disabled = true;
         try {
           const wrap = document.getElementById(`formSection-${activeFormId}`);
-          await window.ApplicationExporter.exportToPdf(activeFormId, wrap);
-          showToast('已导出 A4 PDF！');
+          const i18n = (window.APPLICATION_I18N && window.APPLICATION_I18N[currentLang]) 
+                    || (window.APPLICATION_I18N && window.APPLICATION_I18N['zh-CN']) 
+                    || {};
+          await window.ApplicationExporter.exportToPdf(activeFormId, wrap, i18n);
+          showToast(i18n.toastPdfExported || '已导出 A4 PDF！');
         } catch (e) {
           console.error(e);
           alert('导出 PDF 失败: ' + e.message);
