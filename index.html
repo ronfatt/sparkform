@@ -219,7 +219,7 @@
             <div class="meta-info-row">
               <div class="meta-info-left">
                 <span data-i18n="app_date_lbl">申请日期：</span>
-                <input type="text" id="off_date" class="form-input-underline" style="width: 140px;" placeholder="2026年10月15日">
+                <input type="text" id="off_date" class="form-input-underline" style="width: 140px;" placeholder="YYYY-MM-DD">
               </div>
               <div class="meta-info-right">
                 <span data-i18n="app_type_lbl">申请类型：</span>
@@ -238,21 +238,21 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 25%;" data-i18n="off_f_lead">负责人姓名</td>
-                <td class="col-value" colspan="3"><input type="text" id="off_lead_name" class="form-input-tight" placeholder="负责人真实姓名"></td>
+                <td class="col-value" colspan="3"><input type="text" id="off_lead_name" class="form-input-tight" data-i18n-ph="ph_name" placeholder="Full Legal Name"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_f_contact">联系电话∕社交账号</td>
-                <td class="col-value" colspan="3"><input type="text" id="off_lead_contact" class="form-input-tight" placeholder="电话 / WhatsApp / Telegram"></td>
+                <td class="col-value" colspan="3"><input type="text" id="off_lead_contact" class="form-input-tight" placeholder="Phone / WhatsApp / Telegram"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_f_city">所属国家∕城市</td>
-                <td class="col-value" style="width: 25%;"><input type="text" id="off_lead_city" class="form-input-tight" placeholder="国家 / 城市"></td>
+                <td class="col-value" style="width: 25%;"><input type="text" id="off_lead_city" class="form-input-tight" data-i18n-ph="ph_city" placeholder="Country / City"></td>
                 <td class="col-label" style="width: 25%;" data-i18n="off_f_team">团队名称</td>
-                <td class="col-value" style="width: 25%;"><input type="text" id="off_lead_team" class="form-input-tight" placeholder="所属市场团队"></td>
+                <td class="col-value" style="width: 25%;"><input type="text" id="off_lead_team" class="form-input-tight" data-i18n-ph="ph_team" placeholder="Market Team Name"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_f_addr">办公室详细地址</td>
-                <td class="col-value" colspan="3"><input type="text" id="off_address" class="form-input-tight" placeholder="详细街道门牌号 / 写字楼单元号"></td>
+                <td class="col-value" colspan="3"><input type="text" id="off_address" class="form-input-tight" data-i18n-ph="ph_addr" placeholder="Street address, building, unit number"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_f_area">办公室面积</td>
@@ -277,7 +277,7 @@
                   </div>
                 </td>
                 <td class="col-label" data-i18n="off_f_lease">租赁期限</td>
-                <td class="col-value"><input type="text" id="off_lease_period" class="form-input-tight" placeholder="年/月/日 至 年/月/日"></td>
+                <td class="col-value"><input type="text" id="off_lease_period" class="form-input-tight" data-i18n-ph="ph_period" placeholder="YYYY-MM-DD to YYYY-MM-DD"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_f_start">正式启用日期</td>
@@ -292,7 +292,7 @@
                   </div>
                 </td>
                 <td class="col-label" data-i18n="off_f_sub_p">申请补贴期限</td>
-                <td class="col-value"><input type="text" id="off_sub_period" class="form-input-tight" placeholder="年/月/日 至 年/月/日"></td>
+                <td class="col-value"><input type="text" id="off_sub_period" class="form-input-tight" data-i18n-ph="ph_period" placeholder="YYYY-MM-DD to YYYY-MM-DD"></td>
               </tr>
             </tbody>
           </table>
@@ -319,7 +319,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_1" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_1" class="form-input-tight" placeholder="发光字/亚克力背景板"></td>
+                <td><input type="text" id="mat_desc_1" class="form-input-tight" data-i18n-ph="ph_m1" placeholder="Light box / Acrylic background"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m2">公司介绍及Spark One介绍资料</td>
@@ -330,7 +330,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_2" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_2" class="form-input-tight" placeholder="官方画册 200份"></td>
+                <td><input type="text" id="mat_desc_2" class="form-input-tight" data-i18n-ph="ph_m2" placeholder="Official brochure 200 copies"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m3">经审核的课程课件及讲解资料</td>
@@ -341,7 +341,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_3" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_3" class="form-input-tight" placeholder="最新23P路演课件"></td>
+                <td><input type="text" id="mat_desc_3" class="form-input-tight" data-i18n-ph="ph_m3" placeholder="Latest 23-page pitch deck"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m4">风险说明及客户服务指引</td>
@@ -352,7 +352,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_4" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_4" class="form-input-tight" placeholder="风险揭示牌已摆放"></td>
+                <td><input type="text" id="mat_desc_4" class="form-input-tight" data-i18n-ph="ph_m4" placeholder="Risk disclosure sign displayed"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m5">桌椅、投影∕显示设备</td>
@@ -363,7 +363,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_5" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_5" class="form-input-tight" placeholder="会议桌2张，椅子30把，75寸电视"></td>
+                <td><input type="text" id="mat_desc_5" class="form-input-tight" data-i18n-ph="ph_m5" placeholder="2 tables, 30 chairs, 75-inch display"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m6">网络、收音及视频拍摄设备</td>
@@ -374,7 +374,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_6" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_6" class="form-input-tight" placeholder="千兆光纤，无线麦克风"></td>
+                <td><input type="text" id="mat_desc_6" class="form-input-tight" data-i18n-ph="ph_m6" placeholder="Gigabit fiber, wireless microphones"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m7">签到表、活动记录及咨询登记表</td>
@@ -385,7 +385,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_7" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_7" class="form-input-tight" placeholder="纸质登记册已备齐"></td>
+                <td><input type="text" id="mat_desc_7" class="form-input-tight" data-i18n-ph="ph_m7" placeholder="Physical sign-in log ready"></td>
               </tr>
               <tr>
                 <td data-i18n="off_m8">其他物料</td>
@@ -396,7 +396,7 @@
                     <label class="tight-opt-item"><input type="radio" name="mat_8" value="none"> <span data-i18n="opt_none">未准备</span></label>
                   </div>
                 </td>
-                <td><input type="text" id="mat_desc_8" class="form-input-tight" placeholder="饮水机、咖啡茶歇角"></td>
+                <td><input type="text" id="mat_desc_8" class="form-input-tight" data-i18n-ph="ph_m8" placeholder="Water dispenser, coffee corner"></td>
               </tr>
             </tbody>
           </table>
@@ -424,39 +424,39 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 30%;" data-i18n="off_c_name">社区群名称及平台</td>
-                <td class="col-value"><input type="text" id="off_comm_name" class="form-input-tight" placeholder="例如：Spark One 亚太核心财富群 (Telegram/微信)"></td>
+                <td class="col-value"><input type="text" id="off_comm_name" class="form-input-tight" placeholder="Telegram / WhatsApp Group"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_link">社区群链接∕群编号</td>
-                <td class="col-value"><input type="text" id="off_comm_link" class="form-input-tight" placeholder="https://t.me/... 或 群ID"></td>
+                <td class="col-value"><input type="text" id="off_comm_link" class="form-input-tight" placeholder="https://t.me/... or Group ID"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_admin">群主及管理员</td>
-                <td class="col-value"><input type="text" id="off_comm_admins" class="form-input-tight" placeholder="群主及2名专职管理人员姓名"></td>
+                <td class="col-value"><input type="text" id="off_comm_admins" class="form-input-tight" data-i18n-ph="ph_comm_admins" placeholder="Group owner and 2 dedicated admins"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_members">当前群人数</td>
-                <td class="col-value"><input type="number" id="off_comm_members" class="form-input-tight" style="width: 120px;" placeholder="人数"></td>
+                <td class="col-value"><input type="number" id="off_comm_members" class="form-input-tight" style="width: 120px;" placeholder="500"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_active">近30天活跃人数及统计口径</td>
-                <td class="col-value"><input type="text" id="off_comm_active" class="form-input-tight" placeholder="例如：日均发言 80+ 人，每周互动 300+ 人次"></td>
+                <td class="col-value"><input type="text" id="off_comm_active" class="form-input-tight" data-i18n-ph="ph_comm_active" placeholder="Daily active 80+, weekly interactions 300+"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_lang">服务地区及主要语言</td>
-                <td class="col-value"><input type="text" id="off_comm_lang" class="form-input-tight" placeholder="例如：新加坡 / 马来西亚 / 中文普通话、英语"></td>
+                <td class="col-value"><input type="text" id="off_comm_lang" class="form-input-tight" placeholder="English / Chinese / Malay"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_daily">每日内容发布安排</td>
-                <td class="col-value"><input type="text" id="off_comm_daily" class="form-input-tight" placeholder="早报行情、盘面简析、晚间套利实盘通报"></td>
+                <td class="col-value"><input type="text" id="off_comm_daily" class="form-input-tight" data-i18n-ph="ph_comm_daily" placeholder="Morning briefing, market analysis, evening profit report"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_weekly">每周课程及活动安排</td>
-                <td class="col-value"><input type="text" id="off_comm_weekly" class="form-input-tight" placeholder="周二线上量化解析，周六线下办公室茶歇交流会"></td>
+                <td class="col-value"><input type="text" id="off_comm_weekly" class="form-input-tight" data-i18n-ph="ph_comm_weekly" placeholder="Tuesday online quant review, Saturday offline VIP salon"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_c_feed">客户问题反馈与处理方式</td>
-                <td class="col-value"><input type="text" id="off_comm_feedback" class="form-input-tight" placeholder="1对1专属顾问跟进，2小时内快速响应闭环"></td>
+                <td class="col-value"><input type="text" id="off_comm_feedback" class="form-input-tight" data-i18n-ph="ph_comm_feedback" placeholder="1-on-1 advisor follow-up, 2-hour response SLA"></td>
               </tr>
             </tbody>
           </table>
@@ -479,7 +479,7 @@
             <span class="badge-num">5</span> <span data-i18n="off_sec5">考核期限与目标</span>
           </div>
           <div style="font-size:11px; margin-bottom:4px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-            <div><span data-i18n="off_kpi_p">考核期限：</span><input type="text" id="off_kpi_period" class="form-input-underline" style="width:160px;" placeholder="2026/11/01 至 2026/11/30"></div>
+            <div><span data-i18n="off_kpi_p">考核期限：</span><input type="text" id="off_kpi_period" class="form-input-underline" style="width:160px;" data-i18n-ph="ph_period" placeholder="YYYY-MM-DD to YYYY-MM-DD"></div>
             <div><span data-i18n="off_kpi_f">考核频率：</span>
               <label class="tight-opt-item"><input type="radio" name="off_kpi_freq"> <span data-i18n="freq_weekly">每周</span></label>
               <label class="tight-opt-item"><input type="radio" name="off_kpi_freq" checked> <span data-i18n="freq_monthly">每月</span></label>
@@ -498,43 +498,43 @@
             <tbody>
               <tr>
                 <td data-i18n="off_k1">办公室实际开放天数</td>
-                <td><input type="text" id="off_t_open" class="form-input-tight" placeholder="≥ 24 天"></td>
+                <td>≥ 24 <span data-i18n="unit_day">天</span></td>
                 <td><input type="text" id="off_a_open" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_open" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="off_k2">课程∕活动场次</td>
-                <td><input type="text" id="off_t_event" class="form-input-tight" placeholder="≥ 8 场"></td>
+                <td>≥ 8 <span data-i18n="unit_session">场</span></td>
                 <td><input type="text" id="off_a_event" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_event" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="off_k3">有效视频提交天数</td>
-                <td><input type="text" id="off_t_video" class="form-input-tight" placeholder="≥ 20 天"></td>
+                <td>≥ 20 <span data-i18n="unit_day">天</span></td>
                 <td><input type="text" id="off_a_video" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_video" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="off_k4">课程参与人数∕人次</td>
-                <td><input type="text" id="off_t_people" class="form-input-tight" placeholder="≥ 150 人次"></td>
+                <td>≥ 150 <span data-i18n="unit_person_time">人次</span></td>
                 <td><input type="text" id="off_a_people" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_people" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="off_k5">社区活跃人数</td>
-                <td><input type="text" id="off_t_active" class="form-input-tight" placeholder="≥ 100 人"></td>
+                <td>≥ 100 <span data-i18n="unit_person">人</span></td>
                 <td><input type="text" id="off_a_active" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_active" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="off_k6">客户咨询及问题处理完成率</td>
-                <td><input type="text" id="off_t_rate" class="form-input-tight" placeholder="≥ 98%"></td>
+                <td>≥ 98%</td>
                 <td><input type="text" id="off_a_rate" class="form-input-tight"></td>
-                <td><input type="text" id="off_r_rate" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="off_k7">业绩目标：</td>
-                <td colspan="3"><input type="text" id="off_kpi_goal" class="form-input-tight" placeholder="直推量化托管额度突破 200,000 美元"></td>
+                <td colspan="3"><input type="text" id="off_kpi_goal" class="form-input-tight" data-i18n-ph="ph_off_goal" placeholder="Direct quant custody volume exceeding 200,000 USD"></td>
               </tr>
             </tbody>
           </table>
@@ -576,7 +576,7 @@
             <div class="meta-info-row">
               <div class="meta-info-left">
                 <span data-i18n="app_date_lbl">申请日期：</span>
-                <input type="text" id="lec_date" class="form-input-underline" style="width: 140px;" placeholder="2026年10月15日">
+                <input type="text" id="lec_date" class="form-input-underline" style="width: 140px;" placeholder="YYYY-MM-DD">
               </div>
               <div class="meta-info-right">
                 <span data-i18n="app_type_lbl">申请类型：</span>
@@ -595,39 +595,39 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 25%;" data-i18n="lec_f_name">讲师姓名</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_name" class="form-input-tight" placeholder="讲师真实姓名"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_name" class="form-input-tight" data-i18n-ph="ph_name" placeholder="Full Legal Name"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_account">会员编号∕职务</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_account" class="form-input-tight" placeholder="SPK-XXXXXX / 首席量化讲师"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_account" class="form-input-tight" placeholder="SPK-XXXXXX / Senior Lecturer"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_city">所属国家∕城市</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_city" class="form-input-tight" placeholder="国家 / 城市"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_city" class="form-input-tight" data-i18n-ph="ph_city" placeholder="Country / City"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_contact">联系电话∕社交账号</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_contact" class="form-input-tight" placeholder="电话 / WhatsApp / 微信"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_contact" class="form-input-tight" placeholder="Phone / WhatsApp / Telegram"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_lang">授课语言</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_lang" class="form-input-tight" placeholder="中文普通话、英语、粤语"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_lang" class="form-input-tight" placeholder="English / Chinese / Malay"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_team">所属团队∕办公室</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_team" class="form-input-tight" placeholder="所属团队或服务中心名称"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_team" class="form-input-tight" data-i18n-ph="ph_team" placeholder="Market Team Name"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_ref">推荐负责人及联系方式</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_ref" class="form-input-tight" placeholder="推荐人姓名及电话"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_ref" class="form-input-tight" data-i18n-ph="ph_ref" placeholder="Referrer name and phone"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_exp">授课经验及擅长主题</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_exp" class="form-input-tight" placeholder="5年金融对冲讲课经验，擅长宏观量化与套利规则解读"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_exp" class="form-input-tight" data-i18n-ph="ph_exp" placeholder="5 years lecturing experience, macro & quant arbitrage"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_amt">申请补贴金额及币种</td>
-                <td class="col-value" colspan="3"><input type="text" id="lec_amt" class="form-input-tight" placeholder="例如：2,500 USD / 月"></td>
+                <td class="col-value" colspan="3"><input type="text" id="lec_amt" class="form-input-tight" placeholder="2,500 USD / Month"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_f_mode">申请补贴方式</td>
@@ -659,25 +659,25 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" id="lec_c1_name" class="form-input-tight" value="亚太先锋财富群"></td>
-                <td><input type="text" id="lec_c1_id" class="form-input-tight" value="TG: @spark_apex"></td>
-                <td><input type="text" id="lec_c1_area" class="form-input-tight" value="新加坡/大马"></td>
-                <td><input type="text" id="lec_c1_num" class="form-input-tight" value="500"></td>
-                <td><input type="text" id="lec_c1_lead" class="form-input-tight" value="张总"></td>
-                <td><input type="text" id="lec_c1_freq" class="form-input-tight" value="每周2次"></td>
+                <td><input type="text" id="lec_c1_name" class="form-input-tight" placeholder="Apex APAC Wealth Group"></td>
+                <td><input type="text" id="lec_c1_id" class="form-input-tight" placeholder="TG @spark_apex"></td>
+                <td><input type="text" id="lec_c1_area" class="form-input-tight" placeholder="Singapore / Malaysia"></td>
+                <td><input type="text" id="lec_c1_num" class="form-input-tight" placeholder="500"></td>
+                <td><input type="text" id="lec_c1_lead" class="form-input-tight" placeholder="David Tan"></td>
+                <td><input type="text" id="lec_c1_freq" class="form-input-tight" placeholder="2 / week"></td>
               </tr>
               <tr>
-                <td><input type="text" id="lec_c2_name" class="form-input-tight" value="华南量化私享群"></td>
-                <td><input type="text" id="lec_c2_id" class="form-input-tight" value="微信群08"></td>
-                <td><input type="text" id="lec_c2_area" class="form-input-tight" value="深圳/香港"></td>
-                <td><input type="text" id="lec_c2_num" class="form-input-tight" value="380"></td>
-                <td><input type="text" id="lec_c2_lead" class="form-input-tight" value="刘经理"></td>
-                <td><input type="text" id="lec_c2_freq" class="form-input-tight" value="每周3次"></td>
+                <td><input type="text" id="lec_c2_name" class="form-input-tight" placeholder="Quant Private Group"></td>
+                <td><input type="text" id="lec_c2_id" class="form-input-tight" placeholder="WeChat 08"></td>
+                <td><input type="text" id="lec_c2_area" class="form-input-tight" placeholder="Shenzhen / HK"></td>
+                <td><input type="text" id="lec_c2_num" class="form-input-tight" placeholder="380"></td>
+                <td><input type="text" id="lec_c2_lead" class="form-input-tight" placeholder="Raymond Zhang"></td>
+                <td><input type="text" id="lec_c2_freq" class="form-input-tight" placeholder="3 / week"></td>
               </tr>
             </tbody>
           </table>
           <div style="font-size:11px; margin-bottom:4px;">
-            <span data-i18n="lec_aud_lbl">主要服务对象及需求：</span><input type="text" id="lec_audience" class="form-input-underline" style="width:75%;" value="高净值投资者与新加入量化会员，重点需求底层合规与套利逻辑说明。">
+            <span data-i18n="lec_aud_lbl">主要服务对象及需求：</span><input type="text" id="lec_audience" class="form-input-underline" style="width:75%;" placeholder="HNWIs and quantitative community members">
           </div>
 
           <!-- 三、授课计划 -->
@@ -696,33 +696,33 @@
             <tbody>
               <tr>
                 <td data-i18n="lec_d1">公司介绍与发展规划</td>
-                <td><input type="text" class="form-input-tight" value="Spark Union Capital 企业愿景与MSB合规架构"></td>
-                <td><input type="text" class="form-input-tight" value="4场"></td>
-                <td><input type="text" class="form-input-tight" value="45分钟"></td>
+                <td data-i18n="lec_theme_1">企业愿景与MSB合规架构</td>
+                <td>4 <span data-i18n="unit_session">场</span></td>
+                <td>45 <span data-i18n="unit_min">分钟</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_d2">Spark One 产品及规则说明</td>
-                <td><input type="text" class="form-input-tight" value="黄金与加密量化模型及稳健收益拆解"></td>
-                <td><input type="text" class="form-input-tight" value="6场"></td>
-                <td><input type="text" class="form-input-tight" value="60分钟"></td>
+                <td data-i18n="lec_theme_2">黄金与加密量化模型及稳健收益拆解</td>
+                <td>6 <span data-i18n="unit_session">场</span></td>
+                <td>60 <span data-i18n="unit_min">分钟</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_d3">平台操作与客户服务</td>
-                <td><input type="text" class="form-input-tight" value="DApp工作台充提、质押与量化策略启动实操"></td>
-                <td><input type="text" class="form-input-tight" value="4场"></td>
-                <td><input type="text" class="form-input-tight" value="30分钟"></td>
+                <td data-i18n="lec_theme_3">DApp工作台充提与质押实操</td>
+                <td>4 <span data-i18n="unit_session">场</span></td>
+                <td>30 <span data-i18n="unit_min">分钟</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_d4">投资风险及账户安全教育</td>
-                <td><input type="text" class="form-input-tight" value="私钥保管、防钓鱼诈骗及理性投资指引"></td>
-                <td><input type="text" class="form-input-tight" value="2场"></td>
-                <td><input type="text" class="form-input-tight" value="40分钟"></td>
+                <td data-i18n="lec_theme_4">私钥保管、防钓鱼诈骗及理性投资指引</td>
+                <td>2 <span data-i18n="unit_session">场</span></td>
+                <td>40 <span data-i18n="unit_min">分钟</span></td>
               </tr>
             </tbody>
           </table>
 
           <div style="display:flex; justify-content:space-between; font-size:11px; align-items:center;">
-            <div><span data-i18n="lec_ver_lbl">课件版本 / 审核负责人：</span><input type="text" id="lec_course_ver" class="form-input-underline" style="width:140px;" value="V5.2 / 教育部审核组"></div>
+            <div><span data-i18n="lec_ver_lbl">课件版本 / 审核负责人：</span><input type="text" id="lec_course_ver" class="form-input-underline" style="width:140px;" value="V5.2"></div>
             <div><span data-i18n="lec_form_lbl">授课形式：</span>
               <label class="tight-opt-item"><input type="checkbox" checked> <span data-i18n="lec_f_offline">线下</span></label>
               <label class="tight-opt-item"><input type="checkbox" checked> <span data-i18n="lec_f_live">线上直播</span></label>
@@ -765,7 +765,7 @@
             <span class="badge-num">5</span> <span data-i18n="lec_sec5">考核期限与业绩目标</span>
           </div>
           <div style="font-size:11px; margin-bottom:4px; display:flex; justify-content:space-between;">
-            <div><span data-i18n="off_kpi_p">考核期限：</span><input type="text" id="lec_kpi_period" class="form-input-underline" style="width:160px;" placeholder="2026/11/01 至 2026/11/30"></div>
+            <div><span data-i18n="off_kpi_p">考核期限：</span><input type="text" id="lec_kpi_period" class="form-input-underline" style="width:160px;" data-i18n-ph="ph_period" placeholder="YYYY-MM-DD to YYYY-MM-DD"></div>
             <div><span data-i18n="off_kpi_f">考核频率：</span>
               <label class="tight-opt-item"><input type="radio"> <span data-i18n="freq_weekly">每周</span></label>
               <label class="tight-opt-item"><input type="radio" checked> <span data-i18n="freq_monthly">每月</span></label>
@@ -784,51 +784,51 @@
             <tbody>
               <tr>
                 <td data-i18n="lec_k1">实际授课天数</td>
-                <td><input type="text" class="form-input-tight" placeholder="≥ 20 天"></td>
+                <td>≥ 20 <span data-i18n="unit_day">天</span></td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k2">有效授课场次</td>
-                <td><input type="text" class="form-input-tight" placeholder="≥ 16 场"></td>
+                <td>≥ 16 <span data-i18n="unit_session">场</span></td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k3">有效视频提交率</td>
-                <td><input type="text" class="form-input-tight" placeholder="100%"></td>
+                <td>100%</td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k4">服务社区数量</td>
-                <td><input type="text" class="form-input-tight" placeholder="≥ 2 个"></td>
+                <td>≥ 2</td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k5">课程参与人数∕人次</td>
-                <td><input type="text" class="form-input-tight" placeholder="≥ 300 人次"></td>
+                <td>≥ 300 <span data-i18n="unit_person_time">人次</span></td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k6">学员满意度</td>
-                <td><input type="text" class="form-input-tight" placeholder="≥ 95%"></td>
+                <td>≥ 95%</td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k7">课件准确性及讲解质量</td>
-                <td><input type="text" class="form-input-tight" placeholder="优秀"></td>
+                <td>≥ 98%</td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
               <tr>
                 <td data-i18n="lec_k8">课后问题跟进完成率</td>
-                <td><input type="text" class="form-input-tight" placeholder="100%"></td>
+                <td>100%</td>
                 <td><input type="text" class="form-input-tight"></td>
-                <td><input type="text" class="form-input-tight" placeholder="合格"></td>
+                <td><span data-i18n="kpi_qualified">合格</span></td>
               </tr>
             </tbody>
           </table>
@@ -862,9 +862,9 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 20%;" data-i18n="lec_th_sign">申请人签名</td>
-                <td style="width: 30%;"><input type="text" id="lec_sign" class="form-input-tight" placeholder="手写或打印姓名"></td>
+                <td style="width: 30%;"><input type="text" id="lec_sign" class="form-input-tight" data-i18n-ph="ph_sign" placeholder="Signature"></td>
                 <td class="col-label" style="width: 20%;" data-i18n="lec_th_ref">推荐负责人</td>
-                <td style="width: 30%;"><input type="text" id="lec_ref_sign" class="form-input-tight" placeholder="签字"></td>
+                <td style="width: 30%;"><input type="text" id="lec_ref_sign" class="form-input-tight" data-i18n-ph="ph_sign" placeholder="Signature"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_th_appr">审批结果</td>
@@ -874,13 +874,13 @@
                   <label class="tight-opt-item"><input type="radio" name="lec_res"> <span data-i18n="opt_reject">不批准</span></label>
                 </td>
                 <td class="col-label" data-i18n="lec_th_aud">审核负责人</td>
-                <td><input type="text" id="lec_auditor" class="form-input-tight" placeholder="签字"></td>
+                <td><input type="text" id="lec_auditor" class="form-input-tight" data-i18n-ph="ph_sign" placeholder="Signature"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="lec_th_date">审核日期</td>
                 <td><input type="date" id="lec_audit_date" class="form-input-tight"></td>
                 <td class="col-label" data-i18n="lec_th_rem">备注</td>
-                <td><input type="text" id="lec_audit_remark" class="form-input-tight" placeholder="批注说明"></td>
+                <td><input type="text" id="lec_audit_remark" class="form-input-tight" data-i18n-ph="ph_remark" placeholder="Remarks"></td>
               </tr>
             </tbody>
           </table>
@@ -914,7 +914,7 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 18%;" data-i18n="act_f_name">活动名称</td>
-                <td class="col-value" colspan="3"><input type="text" id="act_name" class="form-input-tight" placeholder="请输入活动完整名称"></td>
+                <td class="col-value" colspan="3"><input type="text" id="act_name" class="form-input-tight" data-i18n-ph="ph_act_name" placeholder="Full event title"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="act_f_type">活动类型</td>
@@ -946,7 +946,7 @@
               </tr>
               <tr>
                 <td class="col-label" data-i18n="act_f_venue">活动地点</td>
-                <td class="col-value" colspan="3"><input type="text" id="act_venue" class="form-input-tight" placeholder="详细地址及酒店/会议室名称"></td>
+                <td class="col-value" colspan="3"><input type="text" id="act_venue" class="form-input-tight" data-i18n-ph="ph_venue" placeholder="Venue address, hotel or hall name"></td>
               </tr>
             </tbody>
           </table>
@@ -959,15 +959,15 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 18%;" data-i18n="act_f_appname">申请人姓名</td>
-                <td class="col-value" style="width: 32%;"><input type="text" id="act_app_name" class="form-input-tight" placeholder="姓名"></td>
+                <td class="col-value" style="width: 32%;"><input type="text" id="act_app_name" class="form-input-tight" data-i18n-ph="ph_name" placeholder="Full Legal Name"></td>
                 <td class="col-label" style="width: 18%;" data-i18n="act_f_phone">联系电话</td>
-                <td class="col-value" style="width: 32%;"><input type="text" id="act_app_phone" class="form-input-tight" placeholder="手机号"></td>
+                <td class="col-value" style="width: 32%;"><input type="text" id="act_app_phone" class="form-input-tight" data-i18n-ph="ph_phone" placeholder="Phone Number"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="act_f_email">电子邮箱</td>
-                <td class="col-value"><input type="text" id="act_app_email" class="form-input-tight" placeholder="邮箱"></td>
+                <td class="col-value"><input type="text" id="act_app_email" class="form-input-tight" placeholder="user@example.com"></td>
                 <td class="col-label" data-i18n="act_f_team">所属市场团队</td>
-                <td class="col-value"><input type="text" id="act_app_team" class="form-input-tight" placeholder="团队名称"></td>
+                <td class="col-value"><input type="text" id="act_app_team" class="form-input-tight" data-i18n-ph="ph_team" placeholder="Market Team Name"></td>
               </tr>
             </tbody>
           </table>
@@ -980,7 +980,7 @@
             <tbody>
               <tr>
                 <td class="col-label" style="width: 18%;" data-i18n="act_f_theme">活动主题</td>
-                <td class="col-value" colspan="3"><input type="text" id="act_theme" class="form-input-tight" placeholder="例如：2026 智能量化资产配置趋势研讨"></td>
+                <td class="col-value" colspan="3"><input type="text" id="act_theme" class="form-input-tight" data-i18n-ph="ph_act_theme" placeholder="2026 AI Quant Asset Allocation Summit"></td>
               </tr>
               <tr>
                 <td class="col-label" data-i18n="act_f_purpose">活动目的</td>
@@ -1000,10 +1000,10 @@
                 <td class="col-label" data-i18n="act_f_flow">活动流程简介</td>
                 <td class="col-value" colspan="3">
                   <div style="display:flex; flex-direction:column; gap:2px;">
-                    <div>1. <input type="text" id="act_f1" class="form-input-underline" style="width:94%;" value="嘉宾签到与宣传片暖场播放 (30分钟)"></div>
-                    <div>2. <input type="text" id="act_f2" class="form-input-underline" style="width:94%;" value="Spark One 核心量化策略与MSB合规架构介绍 (45分钟)"></div>
-                    <div>3. <input type="text" id="act_f3" class="form-input-underline" style="width:94%;" value="实盘工作台演示与现场QA答疑 (30分钟)"></div>
-                    <div>4. <input type="text" id="act_f4" class="form-input-underline" style="width:94%;" value="商务茶歇与意向VIP开单辅导 (45分钟)"></div>
+                    <div>1. <span data-i18n="act_flow_1">嘉宾签到与宣传片暖场播放 (30分钟)</span></div>
+                    <div>2. <span data-i18n="act_flow_2">Spark One 核心量化策略与MSB合规架构介绍 (45分钟)</span></div>
+                    <div>3. <span data-i18n="act_flow_3">实盘工作台演示与现场QA答疑 (30分钟)</span></div>
+                    <div>4. <span data-i18n="act_flow_4">商务茶歇与意向VIP开单辅导 (45分钟)</span></div>
                   </div>
                 </td>
               </tr>
@@ -1024,19 +1024,19 @@
             <tbody>
               <tr>
                 <td data-i18n="act_b1_lbl">场地租金及设备费</td>
-                <td><input type="number" id="act_b1" class="form-input-tight" value="1200"></td>
+                <td><input type="number" id="act_b1" class="form-input-tight" placeholder="1200"></td>
               </tr>
               <tr>
                 <td data-i18n="act_b2_lbl">餐饮茶歇及水果点心</td>
-                <td><input type="number" id="act_b2" class="form-input-tight" value="600"></td>
+                <td><input type="number" id="act_b2" class="form-input-tight" placeholder="600"></td>
               </tr>
               <tr>
                 <td data-i18n="act_b3_lbl">宣传物料、易拉宝及伴手礼</td>
-                <td><input type="number" id="act_b3" class="form-input-tight" value="400"></td>
+                <td><input type="number" id="act_b3" class="form-input-tight" placeholder="400"></td>
               </tr>
               <tr>
                 <td><strong data-i18n="act_b_total">合计</strong></td>
-                <td><input type="number" id="act_btotal" class="form-input-tight" style="font-weight:700; color:#dc2626;" value="2200"></td>
+                <td><input type="number" id="act_btotal" class="form-input-tight" style="font-weight:700; color:#dc2626;" placeholder="2200"></td>
               </tr>
             </tbody>
           </table>
@@ -1062,11 +1062,11 @@
                 <tbody>
                   <tr>
                     <td class="col-label" style="font-size:10px; padding:2px;" data-i18n="act_resp_1">第一负责人</td>
-                    <td style="padding:2px;"><input type="text" id="act_resp1" class="form-input-tight" placeholder="姓名 电话 职务" value="李立明 13800000001 市场总监"></td>
+                    <td style="padding:2px;"><input type="text" id="act_resp1" class="form-input-tight" placeholder="Marcus Li (+65 82991188)"></td>
                   </tr>
                   <tr>
                     <td class="col-label" style="font-size:10px; padding:2px;" data-i18n="act_resp_2">第二负责人</td>
-                    <td style="padding:2px;"><input type="text" id="act_resp2" class="form-input-tight" placeholder="姓名 电话 职务" value="张峰 13900000002 团队长"></td>
+                    <td style="padding:2px;"><input type="text" id="act_resp2" class="form-input-tight" placeholder="Raymond Zhang (+86 13828889999)"></td>
                   </tr>
                 </tbody>
               </table>
@@ -1080,7 +1080,7 @@
           <div class="rules-clause-box" style="font-size:10px; line-height:1.3; margin-bottom:4px;">
             <div data-i18n="act_risk_txt">1. 活动严格遵守当地法律法规； 2. 不进行任何虚假宣传； 3. 不承诺固定收益或保本收益； 4. 不擅自修改公司官方资料； 5. 活动结束后按要求提交活动总结及现场照片； 6. 维护星火联合资本品牌形象。</div>
             <div style="margin-top:4px; display:flex; justify-content:space-between; align-items:center;">
-              <div><span data-i18n="act_sign_lbl">申请人签字：</span><input type="text" id="act_sign" class="form-input-underline" style="width:160px;" placeholder="手写或签字"></div>
+              <div><span data-i18n="act_sign_lbl">申请人签字：</span><input type="text" id="act_sign" class="form-input-underline" style="width:160px;" data-i18n-ph="ph_sign" placeholder="Signature"></div>
               <div><span data-i18n="act_date_lbl">日期：</span><input type="date" id="act_sign_date" class="form-input-underline" style="width:120px;"></div>
             </div>
           </div>
@@ -1099,7 +1099,7 @@
               </tr>
               <tr>
                 <td colspan="4">
-                  <span data-i18n="act_f_sum">活动总结：</span><input type="text" id="act_summary" class="form-input-underline" style="width:88%;" placeholder="活动圆满成功，现场转化率达标...">
+                  <span data-i18n="act_f_sum">活动总结：</span><input type="text" id="act_summary" class="form-input-underline" style="width:88%;" data-i18n-ph="ph_summary" placeholder="Event successful, target conversion achieved...">
                 </td>
               </tr>
             </tbody>
@@ -1133,31 +1133,31 @@
             <tbody>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_name">姓名</td>
-                <td><input type="text" id="sec1_name" class="form-input-tight" placeholder="真实姓名"></td>
+                <td><input type="text" id="sec1_name" class="form-input-tight" data-i18n-ph="ph_name" placeholder="Full Legal Name"></td>
                 <td class="col-label-compact" data-i18n="pilot_account">会员账号</td>
                 <td><input type="text" id="sec1_account" class="form-input-tight" placeholder="SPK-XXXXXX"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_contact">联系电话/邮箱</td>
-                <td><input type="text" id="sec1_contact" class="form-input-tight" placeholder="手机号/邮箱"></td>
+                <td><input type="text" id="sec1_contact" class="form-input-tight" placeholder="Phone / Email"></td>
                 <td class="col-label-compact" data-i18n="pilot_residence">常驻国家/城市</td>
-                <td><input type="text" id="sec1_residence" class="form-input-tight" placeholder="新加坡/吉隆坡"></td>
+                <td><input type="text" id="sec1_residence" class="form-input-tight" data-i18n-ph="ph_city" placeholder="Country / City"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_lang">常用语言</td>
-                <td><input type="text" id="sec1_lang" class="form-input-tight" placeholder="普通话/英语"></td>
+                <td><input type="text" id="sec1_lang" class="form-input-tight" placeholder="English / Chinese"></td>
                 <td class="col-label-compact" data-i18n="pilot_team">所属团队及负责人</td>
-                <td><input type="text" id="sec1_team" class="form-input-tight" placeholder="团队名称"></td>
+                <td><input type="text" id="sec1_team" class="form-input-tight" data-i18n-ph="ph_team" placeholder="Market Team Name"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_job">从业经历</td>
-                <td colspan="3"><input type="text" id="sec1_job" class="form-input-tight" placeholder="职业背景与Web3/金融经验"></td>
+                <td colspan="3"><input type="text" id="sec1_job" class="form-input-tight" data-i18n-ph="ph_job" placeholder="Professional background in Web3 / finance"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_hours">每周投入时间</td>
                 <td><div style="display:flex; align-items:center; gap:4px;"><input type="number" id="sec1_hours" class="form-input-tight" style="width:70px;"> <span data-i18n="unit_hours_week">小时/周</span></div></td>
                 <td class="col-label-compact" data-i18n="pilot_perf">业绩情况</td>
-                <td><input type="text" id="sec1_perf_detail" class="form-input-tight" placeholder="业绩口径及时间"></td>
+                <td><input type="text" id="sec1_perf_detail" class="form-input-tight" data-i18n-ph="ph_perf" placeholder="Performance track record and timeframe"></td>
               </tr>
             </tbody>
           </table>
@@ -1170,17 +1170,17 @@
                 <td class="col-label-compact" data-i18n="pilot_amount">申请额度</td>
                 <td>
                   <div class="tight-options">
-                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="3000"> 3,000 美元</label>
-                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="5000"> 5,000 美元</label>
-                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="10000" checked> 10,000 美元</label>
+                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="3000"> $3,000 USD</label>
+                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="5000"> $5,000 USD</label>
+                    <label class="tight-opt-item"><input type="radio" name="sec2_amount" value="10000" checked> $10,000 USD</label>
                   </div>
                 </td>
                 <td class="col-label-compact" data-i18n="pilot_target_city">目标城市</td>
-                <td><input type="text" id="sec2_regions" class="form-input-tight" placeholder="重点开拓区域"></td>
+                <td><input type="text" id="sec2_regions" class="form-input-tight" placeholder="Singapore / KL / Shenzhen"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_reason">申请理由与规划</td>
-                <td colspan="3"><input type="text" id="sec2_reason" class="form-input-tight" placeholder="使用规划及30天推进动作"></td>
+                <td colspan="3"><input type="text" id="sec2_reason" class="form-input-tight" placeholder="Expansion plan and 30-day targets"></td>
               </tr>
             </tbody>
           </table>
@@ -1198,16 +1198,16 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="form-input-tight" value="高净值私人投资者"></td>
-                <td><input type="text" class="form-input-tight" value="新加坡CBD"></td>
-                <td><input type="text" class="form-input-tight" value="50人"></td>
-                <td><input type="text" class="form-input-tight" value="高端财富俱乐部，办2场私享下午茶"></td>
+                <td><input type="text" class="form-input-tight" placeholder="HNWIs / Investors"></td>
+                <td><input type="text" class="form-input-tight" placeholder="Singapore CBD"></td>
+                <td><input type="text" class="form-input-tight" placeholder="50"></td>
+                <td><input type="text" class="form-input-tight" placeholder="Private salon / High-net-worth club"></td>
               </tr>
               <tr>
-                <td><input type="text" class="form-input-tight" value="Web3交易者与同行"></td>
-                <td><input type="text" class="form-input-tight" value="吉隆坡/深圳"></td>
-                <td><input type="text" class="form-input-tight" value="150人"></td>
-                <td><input type="text" class="form-input-tight" value="量化策略沙龙，转化核心合伙人"></td>
+                <td><input type="text" class="form-input-tight" placeholder="Web3 traders"></td>
+                <td><input type="text" class="form-input-tight" placeholder="Kuala Lumpur"></td>
+                <td><input type="text" class="form-input-tight" placeholder="150"></td>
+                <td><input type="text" class="form-input-tight" placeholder="Strategy seminars & partner onboarding"></td>
               </tr>
             </tbody>
           </table>
@@ -1218,9 +1218,9 @@
             <tbody>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_reach">有效触达人数</td>
-                <td><input type="text" id="sec4_target_clients" class="form-input-tight" value="200人"></td>
+                <td><input type="text" id="sec4_target_clients" class="form-input-tight" placeholder="200"></td>
                 <td class="col-label-compact" data-i18n="pilot_events">办会/培训场次</td>
-                <td><input type="text" id="sec4_target_events" class="form-input-tight" value="4场"></td>
+                <td><input type="text" id="sec4_target_events" class="form-input-tight" placeholder="4"></td>
               </tr>
               <tr>
                 <td colspan="4" style="font-size:10px; line-height:1.35; color:#334155; padding:6px;">
@@ -1253,11 +1253,11 @@
                   <label class="tight-opt-item"><input type="radio" name="p_res"> <span data-i18n="opt_grant_reject">不通过</span></label>
                 </td>
                 <td class="col-label-compact" data-i18n="pilot_approved_amt">核准扶持额度</td>
-                <td><input type="text" class="form-input-tight" value="$10,000 USD"></td>
+                <td><input type="text" class="form-input-tight" placeholder="$10,000 USD" value="$10,000 USD"></td>
               </tr>
               <tr>
                 <td class="col-label-compact" data-i18n="pilot_audit_opinion">审核意见</td>
-                <td colspan="3"><input type="text" class="form-input-tight" value="背景核验合规，计划可行，予以核准。"></td>
+                <td colspan="3"><span data-i18n="appr_review_ok">背景核验合规，计划可行，予以核准。</span></td>
               </tr>
             </tbody>
           </table>

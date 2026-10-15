@@ -58,10 +58,11 @@
 
     // 默认给各表单日期赋今天的值
     const today = new Date().toISOString().split('T')[0];
-    const todayZh = `${new Date().getFullYear()}年${new Date().getMonth()+1}月${new Date().getDate()}日`;
+    const isZh = (currentLang === 'zh-CN' || currentLang === 'zh-TW');
+    const todayStr = isZh ? `${new Date().getFullYear()}年${new Date().getMonth()+1}月${new Date().getDate()}日` : today;
     ['off_date', 'lec_date', 'act_date', 'act_sign_date', 'sec7_date'].forEach(id => {
       const el = document.getElementById(id);
-      if (el && !el.value) el.value = el.type === 'date' ? today : todayZh;
+      if (el && !el.value) el.value = el.type === 'date' ? today : todayStr;
     });
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -188,6 +189,29 @@
       const key = el.getAttribute('data-i18n');
       if (dict && dict[key] !== undefined) {
         el.textContent = dict[key];
+      }
+    });
+
+    // 翻译页面所有标记了 data-i18n-ph 的输入框 placeholder
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.getAttribute('data-i18n-ph');
+      if (dict && dict[key] !== undefined) {
+        el.setAttribute('placeholder', dict[key]);
+      }
+    });
+
+    // 动态同步更新各表单日期输入框格式（防止非中文显示中文年月日）
+    const isZhLang = (lang === 'zh-CN' || lang === 'zh-TW');
+    const d = new Date();
+    const curTodayStr = isZhLang 
+      ? `${d.getFullYear()}年${String(d.getMonth()+1).padStart(2,'0')}月${String(d.getDate()).padStart(2,'0')}日` 
+      : d.toISOString().split('T')[0];
+    ['off_date', 'lec_date', 'act_date'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        if (!el.value || /^\d{4}[年\-\/]\d{1,2}[月\-\/]\d{1,2}[日]?$/.test(el.value.trim())) {
+          el.value = curTodayStr;
+        }
       }
     });
 
