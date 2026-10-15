@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host --port 3000",
     "start": "vite --host --port 3000",
-    "build": "vite build",
+    "build": "vite build && node -e \"const fs=require('fs'); ['js','css','assets'].forEach(d => fs.existsSync(d) && fs.cpSync(d, 'dist/'+d, {recursive:true})); fs.existsSync('application.html') && fs.copyFileSync('application.html', 'dist/application.html');\"",
     "preview": "vite preview --port 3000"
   },
   "devDependencies": {
