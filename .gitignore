@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+dist/
+*.log
+
+# Exclude bulky raw design archives & legacy subrepo from main portal repo
+Spark\ 设计交接APP/
+尼日利亚学校公益/
+公司资料/
+会员成长体系/
+
+
+_backup*

@@ -1,0 +1,21 @@
+{
+  "name": "spark-form-portal",
+  "version": "1.0.0",
+  "description": "Spark One Official Standardized Form Application Center (12 Languages, A4 PDF & Word Export)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 3000",
+    "start": "vite --host --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^5.4.14"
+  },
+  "dependencies": {
+    "docx": "^9.11.0",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1"
+  }
+}
