@@ -27,6 +27,7 @@ window.ApplicationExporter = (function () {
     if (formId === 'office-subsidy') title = translate('off_title', '办公室补贴申请表');
     else if (formId === 'lecturer-subsidy') title = translate('lec_title', '讲师补贴申请表');
     else if (formId === 'event-apply') title = translate('act_title', '活动申请表');
+    else if (formId === 'points-mall') title = translate('mall_title', '积分商城产品合作申请表');
     else title = translate('pilot_title', '市场领航扶持账号申请表');
     
     const cleanTitle = title.replace(/[\\/:*?"<>|]/g, '_').replace(/\s+/g, '_');
@@ -570,6 +571,95 @@ window.ApplicationExporter = (function () {
                 new TableCell({ columnSpan: 4, children: [new Paragraph({ children: [new TextRun({ text: `${t('act_f_sum', '活动总结：')} ${formData.act_summary || ''}`, size: 15 })] })] })
               ]
             })
+          ]
+        })
+      );
+
+    // =========================================================================
+    // 表单 E: 积分商城产品提交与合作申请表 (双页规范)
+    // =========================================================================
+    } else if (formId === 'points-mall') {
+      docChildren.push(
+        new Paragraph({
+          children: [
+            new TextRun({ text: "SPARK UNION CAPITAL INC.", bold: true, size: 20, color: "2E1065" }),
+            new TextRun({ text: `       ${t('mall_title', '积分商城产品提交与合作申请表')}`, bold: true, size: 24, color: "1E1B4B" })
+          ],
+          spacing: { after: 40 }
+        }),
+        createSectionBar(t('mall_sec1', "1. 合作方基本资质与主体信息")),
+        new Paragraph({ spacing: { before: 15, after: 15 } }),
+        new Table({
+          width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders,
+          rows: [
+            createTwoColRow(t('mall_member_name', "会员姓名"), formData.mall_member_name, 25),
+            createTwoColRow(t('mall_member_uid', "会员 UID"), formData.mall_member_uid, 25),
+            createTwoColRow(t('mall_member_level', "当前会员等级"), formData.mall_level || 'S4', 25),
+            createTwoColRow(t('mall_country', "所在国家/地区"), formData.mall_country, 25),
+            createTwoColRow(t('mall_company_name', "企业/商户名称"), formData.mall_company_name, 25),
+            createTwoColRow(t('mall_reg_city', "注册地及登记号"), formData.mall_reg_city, 25),
+            createTwoColRow(t('mall_supply_type', "供货身份"), formData.mall_identity === 'factory' ? t('opt_factory', '生产厂家') : formData.mall_identity === 'agent' ? t('opt_agent', '授权代理') : formData.mall_identity === 'dealer' ? t('opt_dealer', '经销商') : t('opt_brand', '自有品牌'), 25),
+            createTwoColRow(t('mall_main_category', "主要经营品类"), formData.mall_main_category, 25),
+            createTwoColRow(t('mall_contact_person', "联系人姓名"), formData.mall_contact_person, 25),
+            createTwoColRow(t('mall_contact_phone', "联系电话/WhatsApp"), formData.mall_contact_phone, 25),
+            createTwoColRow(t('mall_contact_email', "电子邮箱"), formData.mall_contact_email, 25),
+            createTwoColRow(t('mall_contact_im', "常用沟通方式"), formData.mall_contact_im, 25)
+          ]
+        }),
+        new Paragraph({ spacing: { before: 30, after: 15 } }),
+        createSectionBar(t('mall_sec2', "2. 拟提交产品基础信息与规格参数")),
+        new Paragraph({ spacing: { before: 15, after: 15 } }),
+        new Table({
+          width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders,
+          rows: [
+            createTwoColRow(t('mall_prod_name', "产品名称"), formData.mall_prod_name, 25),
+            createTwoColRow(t('mall_brand_name', "品牌名称"), formData.mall_brand_name, 25),
+            createTwoColRow(t('mall_origin_cat', "产地及所属品类"), formData.mall_origin_cat, 25),
+            createTwoColRow(t('mall_prod_model', "型号/材质/成分"), formData.mall_prod_model, 25),
+            createTwoColRow(t('mall_spec_detail', "尺寸/重量/规格"), formData.mall_spec_detail, 25),
+            createTwoColRow(t('mall_prod_variants', "可选颜色/款式"), formData.mall_prod_variants, 25),
+            createTwoColRow(t('mall_prod_usage', "产品用途与适用人群"), formData.mall_prod_usage, 25),
+            createTwoColRow(t('mall_shelf_life', "保质期/储存条件"), formData.mall_shelf_life, 25),
+            createTwoColRow(t('mall_prod_qty', "拟提交产品数量"), formData.mall_prod_qty, 25),
+            createTwoColRow(t('mall_pkg_list', "包装及配件清单"), formData.mall_pkg_list, 25),
+            createTwoColRow(t('mall_prod_intro', "简短介绍及卖点"), formData.mall_prod_intro, 25)
+          ]
+        }),
+        new Paragraph({ children: [new PageBreak()] }),
+        createSectionBar(t('mall_sec3', "3. 产品积分定价与国际物流核算 (800积分=1美元)")),
+        new Paragraph({ spacing: { before: 15, after: 15 } }),
+        new Table({
+          width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders,
+          rows: [
+            createTwoColRow(t('mall_cost_prod_lbl', "① 产品费用 (USD)"), `$${formData.mall_cost_prod || '0'} USD`, 25),
+            createTwoColRow(t('mall_cost_pack_lbl', "② 包装费用 (USD)"), `$${formData.mall_cost_pack || '0'} USD`, 25),
+            createTwoColRow(t('mall_cost_ship_lbl', "③ 国际物流费用 (USD)"), `$${formData.mall_cost_ship || '0'} USD`, 25),
+            createTwoColRow(t('mall_cost_total_lbl', "合计总成本 (USD)"), formData.mall_cost_total || `$${(parseFloat(formData.mall_cost_prod||0)+parseFloat(formData.mall_cost_pack||0)+parseFloat(formData.mall_cost_ship||0)).toFixed(2)} USD`, 25),
+            createTwoColRow(t('mall_calc_points_lbl', "★ 申请上架兑换积分"), formData.mall_calc_points || `${Math.round((parseFloat(formData.mall_cost_prod||0)+parseFloat(formData.mall_cost_pack||0)+parseFloat(formData.mall_cost_ship||0))*800)} 积分`, 25),
+            createTwoColRow(t('mall_retail_price_lbl', "日常市场零售价"), formData.mall_retail_price, 25),
+            createTwoColRow(t('mall_supply_price_lbl', "合作供货底价"), formData.mall_supply_price, 25),
+            createTwoColRow(t('mall_price_valid_lbl', "价格有效期"), formData.mall_price_valid, 25),
+            createTwoColRow(t('mall_stock_qty_lbl', "首批可供库存"), formData.mall_stock_qty, 25),
+            createTwoColRow(t('mall_dropship_lbl', "单件代发支持"), formData.mall_dropship === 'no' ? t('opt_no', '不支持 (批量)') : t('opt_yes', '支持单件代发'), 25),
+            createTwoColRow(t('mall_restock_lead_lbl', "起订量及补货周期"), formData.mall_restock_lead, 25),
+            createTwoColRow(t('mall_ship_origin_lbl', "发货地及仓库"), formData.mall_ship_origin, 25),
+            createTwoColRow(t('mall_ship_time_lbl', "发货时效及送达时间"), formData.mall_ship_time, 25),
+            createTwoColRow(t('mall_ship_dest_lbl', "支持配送国家/地区"), formData.mall_ship_dest, 25),
+            createTwoColRow(t('mall_ship_restricted_lbl', "偏远附加费及限制地区"), formData.mall_ship_restricted, 25),
+            createTwoColRow(t('mall_customs_payer_lbl', "关税及清关承担方"), formData.mall_customs_payer, 25)
+          ]
+        }),
+        new Paragraph({ spacing: { before: 30, after: 15 } }),
+        createSectionBar(t('mall_sec4', "4. 售后服务保障与合作声明")),
+        new Paragraph({ spacing: { before: 15, after: 15 } }),
+        new Table({
+          width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders,
+          rows: [
+            createTwoColRow(t('mall_return_policy_lbl', "退换货政策及期限"), formData.mall_return_policy, 25),
+            createTwoColRow(t('mall_damage_handling_lbl', "破损/错发处理"), formData.mall_damage_handling, 25),
+            createTwoColRow(t('mall_aftersales_contact_lbl', "售后对接人"), formData.mall_aftersales_contact, 25),
+            createTwoColRow(t('mall_cert_files_lbl', "提供资质证明"), formData.mall_cert_files, 25),
+            createTwoColRow(t('mall_pledge_title', "合规声明与签署"), `${t('mall_pledge_text', '本人/本商户确认提交信息真实完整，承诺所供商品来源合法、正品保障；知悉商城统一按 800 积分＝1 美元核算，同意货款实行每 15 天结算一次；承担发货、国际物流、正品品质及售后履约责任。')}\n${t('sign_lbl', '申请人签名：')}${formData.mall_sign || ''}        ${t('date_lbl', '日期：')}${formData.mall_sign_date || getTodayString(currentLang)}`, 25)
           ]
         })
       );

@@ -14,7 +14,8 @@
     'office-subsidy': '办公室补贴申请表',
     'lecturer-subsidy': '讲师补贴申请表',
     'event-apply': 'SPARK UNION CAPITAL 活动申请表',
-    'pilot-grant': '市场领航扶持账号额度申请表'
+    'pilot-grant': '市场领航扶持账号额度申请表',
+    'points-mall': '积分商城产品提交与合作申请表'
   };
 
   // 1. 切换表单
@@ -50,7 +51,8 @@
         'office-subsidy': 'off_title',
         'lecturer-subsidy': 'lec_title',
         'event-apply': 'act_main_title',
-        'pilot-grant': 'pilot_title'
+        'pilot-grant': 'pilot_title',
+        'points-mall': 'mall_title'
       };
       const key = formKeyMap[formId];
       activeFormTitle.textContent = (key && dict[key]) ? dict[key] : (formMeta[formId] || formId);
@@ -60,7 +62,7 @@
     const today = new Date().toISOString().split('T')[0];
     const isZh = (currentLang === 'zh-CN' || currentLang === 'zh-TW');
     const todayStr = isZh ? `${new Date().getFullYear()}年${new Date().getMonth()+1}月${new Date().getDate()}日` : today;
-    ['off_date', 'lec_date', 'act_date', 'act_sign_date', 'sec7_date'].forEach(id => {
+    ['off_date', 'lec_date', 'act_date', 'act_sign_date', 'sec7_date', 'mall_date', 'mall_sign_date'].forEach(id => {
       const el = document.getElementById(id);
       if (el && !el.value) el.value = el.type === 'date' ? today : todayStr;
     });
@@ -206,7 +208,7 @@
     const curTodayStr = isZhLang 
       ? `${d.getFullYear()}年${String(d.getMonth()+1).padStart(2,'0')}月${String(d.getDate()).padStart(2,'0')}日` 
       : d.toISOString().split('T')[0];
-    ['off_date', 'lec_date', 'act_date'].forEach(id => {
+    ['off_date', 'lec_date', 'act_date', 'mall_date'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         if (!el.value || /^\d{4}[年\-\/]\d{1,2}[月\-\/]\d{1,2}[日]?$/.test(el.value.trim())) {
@@ -222,7 +224,8 @@
         'office-subsidy': 'off_title',
         'lecturer-subsidy': 'lec_title',
         'event-apply': 'act_main_title',
-        'pilot-grant': 'pilot_title'
+        'pilot-grant': 'pilot_title',
+        'points-mall': 'mall_title'
       };
       const key = formKeyMap[activeFormId];
       if (key && dict[key]) {
@@ -388,6 +391,55 @@
         const el = document.getElementById(k);
         if (el) el.value = d[k];
       });
+    } else if (activeFormId === 'points-mall') {
+      const today = new Date().toISOString().split('T')[0];
+      const d = {
+        mall_member_name: isZh ? 'Alexander Vance (周启明)' : 'Alexander Vance',
+        mall_member_uid: 'SPK-992081',
+        mall_country: isZh ? '新加坡 (Singapore)' : 'Singapore',
+        mall_company_name: 'Apex Nexus Global Tech Pte. Ltd.',
+        mall_reg_city: 'Singapore (UEN: 202419827K)',
+        mall_main_category: isZh ? '智能硬件 / Web3冷钱包 / 数码周边' : 'Smart Hardware / Web3 Cold Wallet',
+        mall_contact_person: 'Alexander Vance',
+        mall_contact_phone: '+65 8299 6688',
+        mall_contact_email: 'alex.vance@apexnexus.io',
+        mall_contact_im: 'Telegram: @alexvance_sg / WeChat: alex_spark',
+        mall_prod_name: isZh ? 'Apex Shield Pro 军工级生物识别多链硬件冷钱包' : 'Apex Shield Pro Biometric Multi-Chain Hardware Cold Wallet',
+        mall_brand_name: 'ApexShield',
+        mall_origin_cat: 'Singapore / Web3 智能硬件',
+        mall_prod_model: 'AS-PRO-2026 / 航空钛铝合金 / CC EAL6+芯片',
+        mall_spec_detail: '102×60×7.5mm / 68g / 3.2寸触摸彩屏',
+        mall_prod_variants: '深空灰 (Titanium Gray) / 星曜黑 (Obsidian Black)',
+        mall_shelf_life: isZh ? '不适用 (原厂硬件三年质保)' : 'N/A (3-Year Factory Warranty)',
+        mall_prod_usage: isZh ? '冷端私钥离线签名、助记词多重物理加密、支持 50+ 公链资产安全存储' : 'Offline private key signing, biometric encryption, supports 50+ blockchains',
+        mall_pkg_list: isZh ? '冷钱包主机×1、防磁保护套×1、Type-C编织线×1、金属密令卡×3' : 'Host unit x1, Anti-magnetic case x1, Type-C cable x1, Metal mnemonic card x3',
+        mall_prod_qty: isZh ? '首批 500 台' : '500 units',
+        mall_prod_intro: isZh ? '专为高净值加密资产投资者打造的旗舰级冷钱包，获国际 CC EAL6+ 金融级认证，完全物理断网离线签名，杜绝黑客攻击与钓鱼盗币风险。' : 'Flagship cold wallet for high-net-worth crypto investors, featuring CC EAL6+ financial certification and 100% air-gapped offline signing.',
+        mall_cost_prod: '85',
+        mall_cost_pack: '3',
+        mall_cost_ship: '12',
+        mall_retail_price: '$168.00 USD',
+        mall_supply_price: '$95.00 USD',
+        mall_price_valid: '2026-12-31',
+        mall_stock_qty: isZh ? '500台 (现货稳定，月产能 3,000 台)' : '500 units (Monthly cap 3,000)',
+        mall_restock_lead: isZh ? '起订量: 1台 / 补货: 7个工作日' : 'MOQ: 1 unit / Lead time: 7 days',
+        mall_ship_origin: isZh ? '新加坡自由港仓库 / 香港国际物流中心' : 'Singapore FreePort / Hong Kong Logistics Hub',
+        mall_ship_dest: isZh ? '新加坡、马来西亚、中国香港/台湾、印尼、泰国、日本、韩国、阿联酋、欧洲主要国家' : 'Singapore, Malaysia, HK/TW, Indonesia, Thailand, Japan, Korea, UAE, EU',
+        mall_ship_restricted: isZh ? '极偏远未通邮岛屿及受海关禁运国家' : 'Sanctioned territories and remote unserviced islands',
+        mall_ship_time: isZh ? '下单后24小时内闪电发货，亚太地区3-5天送达，欧美7-10天' : 'Dispatched within 24h, APAC 3-5 days, EU/US 7-10 days',
+        mall_customs_payer: isZh ? '合作方包税包清关 (DDP完税交付)' : 'DDP (Partner covers all customs & taxes)',
+        mall_return_policy: isZh ? '支持7天无理由退换 (未激活塑封完好)；3年内非人为故障免费换新' : '7-day unconditional return (unopened); 3-year warranty replacement',
+        mall_damage_handling: isZh ? '运输途中破损/丢失全额极速补发，由我司承担' : 'Instant free reshipment for damaged/lost packages',
+        mall_aftersales_contact: '+65 8299 6688 / support@apexnexus.io (4h内响应)',
+        mall_cert_files: 'CE, FCC, RoHS, CC EAL6+, 商标注册证书, 品牌授权书',
+        mall_sign: 'Alexander Vance',
+        mall_sign_date: today
+      };
+      Object.keys(d).forEach(k => {
+        const el = document.getElementById(k);
+        if (el) el.value = d[k];
+      });
+      updatePointsCalc();
     }
 
     showToast('已填入专属示范数据！');
@@ -512,10 +564,28 @@
     }
   }
 
+  // 积分商城实时联动计算
+  function updatePointsCalc() {
+    const prod = parseFloat(document.getElementById('mall_cost_prod')?.value) || 0;
+    const pack = parseFloat(document.getElementById('mall_cost_pack')?.value) || 0;
+    const ship = parseFloat(document.getElementById('mall_cost_ship')?.value) || 0;
+    const total = prod + pack + ship;
+    const points = Math.round(total * 800);
+    const totalEl = document.getElementById('mall_cost_total');
+    const pointsEl = document.getElementById('mall_calc_points');
+    const apprEl = document.getElementById('mall_appr_points');
+    if (totalEl) totalEl.value = total > 0 ? `$${total.toFixed(2)} USD` : '';
+    if (pointsEl) pointsEl.value = points > 0 ? `${points.toLocaleString()} 积分` : '';
+    if (apprEl && points > 0) {
+      apprEl.value = `${points.toLocaleString()} 积分`;
+    }
+  }
+
   // 7. 全局暴露核心方法
   window.switchFormView = switchFormView;
   window.showDirectoryView = showDirectoryView;
   window.updateLanguage = updateLanguage;
+  window.updatePointsCalc = updatePointsCalc;
 
   // 8. 双阶段安全初始化 (杜绝 DOMContentLoaded 错过问题)
   function initApp() {

@@ -89,6 +89,7 @@
           <option value="office-subsidy" selected data-i18n="opt_form_office">FORM-02 办公室补贴申请表</option>
           <option value="lecturer-subsidy" data-i18n="opt_form_lecturer">FORM-03 讲师补贴申请表</option>
           <option value="event-apply" data-i18n="opt_form_event">FORM-04 活动申请表</option>
+          <option value="points-mall" data-i18n="opt_form_mall">FORM-05 积分商城产品合作申请表</option>
         </select>
       </div>
 
@@ -154,6 +155,7 @@
           <button type="button" class="filter-chip" data-cat="lecturer" data-i18n="cat_lecturer">讲师津贴</button>
           <button type="button" class="filter-chip" data-cat="event" data-i18n="cat_event">活动会务</button>
           <button type="button" class="filter-chip" data-cat="market" data-i18n="cat_market">市场扶持</button>
+          <button type="button" class="filter-chip" data-cat="mall" data-i18n="cat_mall">积分商城</button>
         </div>
       </div>
 
@@ -224,6 +226,22 @@
           </div>
         </div>
 
+        <!-- 表单卡片 5: SPARK ONE 积分商城产品合作申请表 -->
+        <div class="form-hub-card" data-category="mall" data-form="points-mall" onclick="window.switchFormView('points-mall')" style="cursor:pointer;">
+          <div>
+            <div class="card-top-row">
+              <span class="card-code">FORM-SPK-MAL05</span>
+              <span class="card-badge" data-i18n="badge_mall">生态赋能</span>
+            </div>
+            <h3 class="card-title" data-i18n="mall_title">Spark One 积分商城产品提交与合作申请表</h3>
+            <p class="card-desc" data-i18n="card_mall_desc">面向 S3 及以上会员开放，提供产品上架、800积分=1美元智能联动核算与全球履约审核。</p>
+          </div>
+          <div class="card-bottom-row">
+            <span class="card-status-pill"><span class="card-status-dot"></span> <span data-i18n="card_a4_badge">A4 精准排版</span></span>
+            <button type="button" class="btn-card-enter" onclick="window.switchFormView('points-mall')" data-i18n="card_enter">进入填写 →</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -243,6 +261,7 @@
             <option value="lecturer-subsidy" data-i18n="opt_form_lecturer">FORM-03 讲师补贴申请表</option>
             <option value="event-apply" data-i18n="opt_form_event">FORM-04 活动申请表</option>
             <option value="pilot-grant" data-i18n="opt_form_pilot">FORM-01 市场领航扶持账号申请</option>
+            <option value="points-mall" data-i18n="opt_form_mall">FORM-05 积分商城产品合作申请表</option>
           </select>
         </div>
       </div>
@@ -1313,6 +1332,326 @@
           </table>
 
         </div>
+      </div>
+
+      <!-- =========================================================================
+           表单 5: SPARK ONE 积分商城产品提交与合作申请表 (A4 双页规范)
+           ========================================================================= -->
+      <div id="formSection-points-mall" class="form-wrapper a4-page-container" style="display: none;">
+        
+        <!-- PAGE 01 / 02: 资质与产品信息 -->
+        <div class="a4-paper" id="paper-mall-p1">
+          <!-- 官方表头 -->
+          <div class="official-header">
+            <div class="header-top-row">
+              <div class="corp-logo-wrap">
+                <img src="assets/spark_brand_full.png" alt="Spark Logo" class="corp-logo-img" onerror="this.src='assets/logo.png'">
+              </div>
+              <div class="corp-slash-decor">FORM-SPK-MAL05</div>
+            </div>
+            <div class="official-title-wrap">
+              <h1 class="official-main-title" data-i18n="mall_title">Spark One 积分商城产品提交与合作申请表</h1>
+              <div class="official-sub-title" data-i18n="mall_sub">SPARK ONE POINTS MALL PRODUCT SUBMISSION & PARTNERSHIP APPLICATION</div>
+            </div>
+            <div class="meta-info-row">
+              <div class="meta-info-left">
+                <span data-i18n="app_date_lbl">申请日期：</span>
+                <input type="text" id="mall_date" class="form-input-underline" style="width: 140px;" placeholder="YYYY-MM-DD">
+              </div>
+              <div class="meta-info-right">
+                <span data-i18n="app_type_lbl">申请类型：</span>
+                <label class="tight-opt-item"><input type="radio" name="mall_type" value="new" checked> <span data-i18n="type_mall_new">新品上架</span></label>
+                <label class="tight-opt-item"><input type="radio" name="mall_type" value="renew"> <span data-i18n="type_mall_renew">补货/续约</span></label>
+                <label class="tight-opt-item"><input type="radio" name="mall_type" value="price"> <span data-i18n="type_mall_price">价格/参数调整</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 准入与合作须知 -->
+          <div class="notice-box-compact" data-i18n="mall_eligibility_notice">
+            📌 <strong>合作准入细则：</strong>本申请面向 SPARK ONE S3 及以上级别会员开放。合作方须拥有合法经营的产品、品牌或稳定供应链，具备可靠销售与履约能力。商城统一按 <strong>800 积分＝1 美元</strong> 标准进行兑换核算。
+          </div>
+
+          <!-- 一、合作方基本资质与主体信息 -->
+          <div class="official-section-title">
+            <span class="badge-num">1</span> <span data-i18n="mall_sec1">合作方基本资质与主体信息</span>
+          </div>
+          <table class="a4-grid-table">
+            <tbody>
+              <tr>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_member_name">会员姓名</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_member_name" class="form-input-tight" data-i18n-ph="ph_name" placeholder="Member Full Name"></td>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_member_uid">会员 UID</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_member_uid" class="form-input-tight" placeholder="SPK-XXXXXX"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_member_level">当前会员等级</td>
+                <td class="col-value">
+                  <div class="tight-options">
+                    <label class="tight-opt-item"><input type="radio" name="mall_level" value="S3"> S3</label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_level" value="S4" checked> S4</label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_level" value="S5"> S5</label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_level" value="S6"> S6</label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_level" value="S7"> S7</label>
+                  </div>
+                </td>
+                <td class="col-label" data-i18n="mall_country">所在国家 / 地区</td>
+                <td class="col-value"><input type="text" id="mall_country" class="form-input-tight" data-i18n-ph="ph_city" placeholder="Country / Region"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_company_name">企业 / 商户名称</td>
+                <td class="col-value"><input type="text" id="mall_company_name" class="form-input-tight" placeholder="Company / Merchant Name"></td>
+                <td class="col-label" data-i18n="mall_reg_city">注册地及登记号</td>
+                <td class="col-value"><input type="text" id="mall_reg_city" class="form-input-tight" placeholder="Registered Location & License No."></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_supply_type">供货身份</td>
+                <td class="col-value">
+                  <div class="tight-options">
+                    <label class="tight-opt-item"><input type="radio" name="mall_identity" value="brand" checked> <span data-i18n="opt_brand">自有品牌</span></label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_identity" value="factory"> <span data-i18n="opt_factory">生产厂家</span></label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_identity" value="agent"> <span data-i18n="opt_agent">授权代理</span></label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_identity" value="dealer"> <span data-i18n="opt_dealer">经销商</span></label>
+                  </div>
+                </td>
+                <td class="col-label" data-i18n="mall_main_category">主要经营品类</td>
+                <td class="col-value"><input type="text" id="mall_main_category" class="form-input-tight" placeholder="Main Product Category"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_contact_person">联系人姓名</td>
+                <td class="col-value"><input type="text" id="mall_contact_person" class="form-input-tight" placeholder="Contact Person"></td>
+                <td class="col-label" data-i18n="mall_contact_phone">联系电话 / WhatsApp</td>
+                <td class="col-value"><input type="text" id="mall_contact_phone" class="form-input-tight" placeholder="+65 / +86 ..."></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_contact_email">电子邮箱</td>
+                <td class="col-value"><input type="email" id="mall_contact_email" class="form-input-tight" placeholder="partner@domain.com"></td>
+                <td class="col-label" data-i18n="mall_contact_im">常用沟通方式</td>
+                <td class="col-value"><input type="text" id="mall_contact_im" class="form-input-tight" placeholder="WeChat / Telegram ID"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 二、拟提交产品基础信息与规格参数 -->
+          <div class="official-section-title">
+            <span class="badge-num">2</span> <span data-i18n="mall_sec2">拟提交产品基础信息与规格参数</span>
+          </div>
+          <table class="a4-grid-table">
+            <tbody>
+              <tr>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_prod_name">产品名称</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_prod_name" class="form-input-tight" placeholder="Official Product Name"></td>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_brand_name">品牌名称</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_brand_name" class="form-input-tight" placeholder="Brand / Trademark"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_origin_cat">产地及所属品类</td>
+                <td class="col-value"><input type="text" id="mall_origin_cat" class="form-input-tight" placeholder="Country of Origin / Subcategory"></td>
+                <td class="col-label" data-i18n="mall_prod_model">型号 / 材质 / 主要成分</td>
+                <td class="col-value"><input type="text" id="mall_prod_model" class="form-input-tight" placeholder="Model No. / Material / Ingredients"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_spec_detail">尺寸 / 重量 / 规格</td>
+                <td class="col-value"><input type="text" id="mall_spec_detail" class="form-input-tight" placeholder="Dimensions & Weight"></td>
+                <td class="col-label" data-i18n="mall_prod_variants">可选颜色 / 款式</td>
+                <td class="col-value"><input type="text" id="mall_prod_variants" class="form-input-tight" placeholder="Color & Variant Options"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_prod_usage">产品用途与适用人群</td>
+                <td class="col-value" colspan="3"><input type="text" id="mall_prod_usage" class="form-input-tight" placeholder="Intended Usage & Target Audience"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_shelf_life">保质期 / 有效期 / 储存</td>
+                <td class="col-value"><input type="text" id="mall_shelf_life" class="form-input-tight" placeholder="Shelf Life & Storage (Or N/A)"></td>
+                <td class="col-label" data-i18n="mall_prod_qty">拟提交产品数量</td>
+                <td class="col-value"><input type="text" id="mall_prod_qty" class="form-input-tight" placeholder="e.g. 500 units"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_pkg_list">包装及随附配件清单</td>
+                <td class="col-value" colspan="3"><input type="text" id="mall_pkg_list" class="form-input-tight" placeholder="Packaging Box, Manual, Cables, Accessories"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_prod_intro">简短介绍及核心卖点</td>
+                <td class="col-value" colspan="3">
+                  <textarea id="mall_prod_intro" class="form-input-tight" rows="3" style="resize:none;" placeholder="建议 50-100 字，说明产品是什么、适合谁使用，列明 3-5 条核心卖点..."></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="page-footer-number">01 / 02</div>
+        </div>
+
+        <!-- PAGE 02 / 02: 积分定价、物流与售后审核 -->
+        <div class="a4-paper" id="paper-mall-p2">
+          <!-- 官方小表头 -->
+          <div class="official-header">
+            <div class="header-top-row">
+              <div class="corp-logo-wrap">
+                <img src="assets/spark_brand_full.png" alt="Spark Logo" class="corp-logo-img" onerror="this.src='assets/logo.png'">
+              </div>
+              <div class="corp-slash-decor">FORM-SPK-MAL05 (PAGE 2/2)</div>
+            </div>
+            <div class="official-title-wrap">
+              <h1 class="official-main-title" data-i18n="mall_title">Spark One 积分商城产品提交与合作申请表</h1>
+            </div>
+          </div>
+
+          <!-- 三、积分定价与物流核算 -->
+          <div class="official-section-title">
+            <span class="badge-num">3</span> <span data-i18n="mall_sec3">产品积分定价与国际物流核算 (800积分=1美元)</span>
+          </div>
+
+          <div class="notice-box-compact" data-i18n="mall_sec3_hint" style="background:#fef3c7; border-left-color:#d97706; color:#78350f;">
+            ⚡ <strong>积分联动计算规范：</strong>申报积分必须包含国际物流费用。计算公式：<strong>产品兑换积分 ＝（产品费用 ＋ 包装费用 ＋ 国际物流费用）× 800</strong>。下方填入三项费用后系统将自动联动计算上架积分。
+          </div>
+
+          <table class="a4-grid-table">
+            <tbody>
+              <tr>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_cost_prod_lbl">① 产品费用 (USD)</td>
+                <td class="col-value" style="width: 30%;">
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <span style="font-weight:700;">$</span>
+                    <input type="number" step="0.01" id="mall_cost_prod" class="form-input-tight" placeholder="0.00" oninput="window.updatePointsCalc && window.updatePointsCalc()">
+                  </div>
+                </td>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_cost_pack_lbl">② 包装费用 (USD)</td>
+                <td class="col-value" style="width: 30%;">
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <span style="font-weight:700;">$</span>
+                    <input type="number" step="0.01" id="mall_cost_pack" class="form-input-tight" placeholder="0.00" oninput="window.updatePointsCalc && window.updatePointsCalc()">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_cost_ship_lbl">③ 国际物流费用 (USD)</td>
+                <td class="col-value">
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <span style="font-weight:700;">$</span>
+                    <input type="number" step="0.01" id="mall_cost_ship" class="form-input-tight" placeholder="0.00" oninput="window.updatePointsCalc && window.updatePointsCalc()">
+                  </div>
+                </td>
+                <td class="col-label" data-i18n="mall_cost_total_lbl">合计总成本 (USD)</td>
+                <td class="col-value">
+                  <input type="text" id="mall_cost_total" class="form-input-tight" readonly placeholder="$0.00 USD" style="font-weight:700; background:#f8fafc;">
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label" style="background:#faf5ff; color:#581c87; font-weight:700;" data-i18n="mall_calc_points_lbl">★ 申请上架兑换积分</td>
+                <td class="col-value" colspan="3" style="background:#faf5ff;">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <input type="text" id="mall_calc_points" class="form-input-tight input-highlight-gold" readonly placeholder="0 积分 (自动核算: 合计 × 800)" style="font-size:13px; max-width:240px;">
+                    <span style="font-size:11px; color:#6b21a8;" data-i18n="mall_calc_rule_note">(含产品+包装+国际物流全部费用，会员兑换后不再另收物流费)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_retail_price_lbl">日常市场零售价</td>
+                <td class="col-value"><input type="text" id="mall_retail_price" class="form-input-tight" placeholder="e.g. $168 USD (含税/运费说明)"></td>
+                <td class="col-label" data-i18n="mall_supply_price_lbl">合作供货底价</td>
+                <td class="col-value"><input type="text" id="mall_supply_price" class="form-input-tight" placeholder="e.g. $95 USD (每15天结算底价)"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_price_valid_lbl">价格有效期</td>
+                <td class="col-value"><input type="text" id="mall_price_valid" class="form-input-tight" placeholder="YYYY-MM-DD 或 有效天数"></td>
+                <td class="col-label" data-i18n="mall_stock_qty_lbl">首批可供库存</td>
+                <td class="col-value"><input type="text" id="mall_stock_qty" class="form-input-tight" placeholder="e.g. 500 units (持续供货)"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_dropship_lbl">单件代发支持</td>
+                <td class="col-value">
+                  <div class="tight-options">
+                    <label class="tight-opt-item"><input type="radio" name="mall_dropship" value="yes" checked> <span data-i18n="opt_yes">支持单件代发</span></label>
+                    <label class="tight-opt-item"><input type="radio" name="mall_dropship" value="no"> <span data-i18n="opt_no">不支持 (需批量采购)</span></label>
+                  </div>
+                </td>
+                <td class="col-label" data-i18n="mall_restock_lead_lbl">起订量及补货周期</td>
+                <td class="col-value"><input type="text" id="mall_restock_lead" class="form-input-tight" placeholder="MOQ & 缺货恢复天数"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_ship_origin_lbl">发货地及仓库</td>
+                <td class="col-value"><input type="text" id="mall_ship_origin" class="form-input-tight" placeholder="Country / Warehouse City"></td>
+                <td class="col-label" data-i18n="mall_ship_time_lbl">发货时效及送达时间</td>
+                <td class="col-value"><input type="text" id="mall_ship_time" class="form-input-tight" placeholder="下单后24-48小时发货，3-7天送达"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_ship_dest_lbl">支持配送国家/地区</td>
+                <td class="col-value" colspan="3"><input type="text" id="mall_ship_dest" class="form-input-tight" placeholder="列明支持配送国家及区域..."></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_ship_restricted_lbl">偏远附加费及限制地区</td>
+                <td class="col-value"><input type="text" id="mall_ship_restricted" class="form-input-tight" placeholder="偏远已计入积分 / 禁运国家"></td>
+                <td class="col-label" data-i18n="mall_customs_payer_lbl">关税及清关承担方</td>
+                <td class="col-value"><input type="text" id="mall_customs_payer" class="form-input-tight" placeholder="DDP 合作方包税清关 / 会员自理"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 四、售后保障与合作方承诺 -->
+          <div class="official-section-title">
+            <span class="badge-num">4</span> <span data-i18n="mall_sec4">售后服务保障与合作方声明</span>
+          </div>
+          <table class="a4-grid-table">
+            <tbody>
+              <tr>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_return_policy_lbl">退换货政策及期限</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_return_policy" class="form-input-tight" placeholder="7天无理由退换 / 质量问题质保..."></td>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_damage_handling_lbl">破损/错发/丢件方案</td>
+                <td class="col-value" style="width: 30%;"><input type="text" id="mall_damage_handling" class="form-input-tight" placeholder="全额补发 / 国际物流赔偿..."></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_aftersales_contact_lbl">售后联系人及响应时间</td>
+                <td class="col-value"><input type="text" id="mall_aftersales_contact" class="form-input-tight" placeholder="Name, Phone, Response within 4h"></td>
+                <td class="col-label" data-i18n="mall_cert_files_lbl">可提供资质文件</td>
+                <td class="col-value"><input type="text" id="mall_cert_files" class="form-input-tight" placeholder="CE / FCC / 检测报告 / 授权书"></td>
+              </tr>
+              <tr>
+                <td colspan="4" style="font-size:10px; line-height:1.4; color:#334155; padding:6px;">
+                  <strong data-i18n="mall_pledge_title">合作方合规声明：</strong>
+                  <span data-i18n="mall_pledge_text">本人/本商户确认提交信息真实完整，承诺所供商品来源合法、正品保障；知悉商城统一按 800 积分＝1 美元核算，同意货款实行每 15 天结算一次；承担发货、国际物流、正品品质及售后履约责任。主体资质文件仅供 SPARK ONE 积分商城合作审核使用。</span>
+                  <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                      <span data-i18n="mall_sign_lbl">申请人/授权代表签名：</span>
+                      <input type="text" id="mall_sign" class="form-input-underline" style="width:140px;" data-i18n-ph="ph_sign" placeholder="Signature">
+                    </div>
+                    <div>
+                      <span data-i18n="mall_date_lbl">签署日期：</span>
+                      <input type="date" id="mall_sign_date" class="form-input-underline" style="width:120px;">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 五、平台审核与上架核准栏 -->
+          <div class="official-section-title">
+            <span class="badge-num">5</span> <span data-i18n="mall_sec5">平台审核与上架核准栏</span>
+          </div>
+          <table class="a4-grid-table" style="margin-bottom:0;">
+            <tbody>
+              <tr>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_audit_res_lbl">资质审核结果</td>
+                <td class="col-value" style="width: 35%;">
+                  <label class="tight-opt-item"><input type="radio" name="mall_audit_res" checked> <span data-i18n="opt_mall_pass">准予上架</span></label>
+                  <label class="tight-opt-item"><input type="radio" name="mall_audit_res"> <span data-i18n="opt_mall_sample">需寄样核验</span></label>
+                  <label class="tight-opt-item"><input type="radio" name="mall_audit_res"> <span data-i18n="opt_mall_supp">补充资质</span></label>
+                  <label class="tight-opt-item"><input type="radio" name="mall_audit_res"> <span data-i18n="opt_mall_reject">不批准</span></label>
+                </td>
+                <td class="col-label" style="width: 20%;" data-i18n="mall_appr_points_lbl">核准上架积分</td>
+                <td class="col-value" style="width: 25%;"><input type="text" id="mall_appr_points" class="form-input-tight" placeholder="80,000 积分" value="80,000 积分"></td>
+              </tr>
+              <tr>
+                <td class="col-label" data-i18n="mall_audit_opinion_lbl">审核意见与结算周期</td>
+                <td class="col-value" colspan="3"><span data-i18n="mall_audit_opinion_val">主体与产品资质核验合规，供货及物流保障可靠。核准上架，实行每15天结算周期。</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="page-footer-number">02 / 02</div>
+        </div>
+
       </div>
 
     </div>

@@ -793,3 +793,23 @@ textarea.form-input-tight {
   flex-direction: row-reverse;
 }
 
+/* 提示通知框与计算高亮 */
+.notice-box-compact {
+  background: #f1f5f9;
+  border-left: 3px solid #4f46e5;
+  padding: 5px 8px;
+  font-size: 10.5px;
+  color: #334155;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  border-radius: 2px;
+}
+
+.input-highlight-gold {
+  background: #fffbeb !important;
+  border-color: #f59e0b !important;
+  font-weight: 700 !important;
+  color: #b45309 !important;
+}
+
+
